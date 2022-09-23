@@ -1,0 +1,163 @@
+.login-box,
+.register-box {
+  width: 360px;
+}
+
+@media (max-width: 576px) {
+  .login-box,
+  .register-box {
+    margin-top: 0.5rem;
+    width: 90%;
+  }
+}
+
+.login-page,
+.register-page {
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #e6eee9;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100vh;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.text-indigo {
+  color: #0e6129;
+}
+.text-indigo:hover {
+  color: #0e6129;
+}
+
+.card-accent-indigo {
+  border-top: 3px solid #0e6129;
+}
+
+.form-control:focus {
+  border-left: 4px solid;
+  border-color: #0e6129;
+  box-shadow: none;
+}
+
+.custom-cb:active {
+  border-color: #0e6129;
+  box-shadow: none;
+}
+
+.custom-cb:focus {
+  border-color: #0e6129;
+  box-shadow: none;
+}
+
+.custom-cb:checked {
+  background-color: #0e6129;
+  border-color: #0e6129;
+}
+
+.btn-indigo {
+  background-color: #0e6129;
+  color: #ffffff;
+  border-color: #745d91;
+  box-shadow: none;
+}
+
+.btn-indigo:focus,
+.btn-indigo:hover {
+  background-color: #01551d !important;
+  color: #ffffff !important;
+  border-color: #01551d !important;
+  box-shadow: none !important;
+}
+
+.btn-indigo:active {
+  background-color: #745d91;
+  color: #ffffff;
+  border-color: #573d78;
+  box-shadow: none;
+}
+
+.bg-indigo {
+  background-color: #0e6129;
+}
+.bg-indigo-light {
+  background-color: #e6eee9;
+}
+
+.custom-sidebar {
+  min-width: 300px;
+  width: 300px;
+  max-width: 300px;
+}
+
+.scrollable-y {
+  overflow-y: auto;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.sidebar-item {
+  text-decoration: none;
+}
+
+.sidebar-item:hover {
+  background-color: #343a40 !important;
+}
+
+.sidebar-active {
+  background-color: #5c6269;
+}
+
+.hoverable-text-light:hover {
+  color: #cccccc !important;
+}
+
+.btn-toggle[aria-expanded="true"] > i {
+  transform: rotate(90deg);
+}
+
+.dropdown-item:active {
+  background-color: #5c6269;
+  color: #ffffff;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background-color: #343a40;
+  color: #ffffff;
+}
+
+.dropdown-menu {
+  background-color: #212529;
+  color: #ffffff !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Google Fonts 
+    - Signika Negative
+    - Nunito
+*/
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&family=Signika+Negative:wght@300;400;500;600;700&display=swap");
+
+.font-nunito {
+  font-family: "Nunito";
+}
+
+.font-signika {
+  font-family: "Signika Negative";
+}
+
+.bg-blue {
+  background-color: #2f375e !important;
+}
