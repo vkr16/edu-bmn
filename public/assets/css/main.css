@@ -131,13 +131,13 @@
 
 .dropdown-item:hover,
 .dropdown-item:focus {
-  background-color: #343a40;
-  color: #ffffff;
+  background-color:#cfd1d3;
+  color: #2f375e;
 }
 
 .dropdown-menu {
-  background-color: #212529;
-  color: #ffffff !important;
+  background-color: #f8f9fa;
+  color: #2f375e !important;
 }
 
 a {
@@ -160,4 +160,27 @@ a {
 
 .bg-blue {
   background-color: #2f375e !important;
+}
+
+
+.btn-blue {
+  background-color: #2f375e;
+  color: #ffffff;
+  border-color: #222848;
+  box-shadow: none;
+}
+
+.btn-blue:focus,
+.btn-blue:hover {
+  background-color: #232a4c !important;
+  color: #ffffff !important;
+  border-color: #222848 !important;
+  box-shadow: none !important;
+}
+
+.btn-blue:active {
+  background-color: #232a4c;
+  color: #ffffff;
+  border-color: #222848;
+  box-shadow: none;
 }

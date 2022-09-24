@@ -40,6 +40,11 @@ $routes->get('/login', 'Auth::login');
 $routes->get('/logout', 'Auth::logout');
 $routes->post('/login', 'Auth::authenticate');
 
+
+
+/**
+ * Admin Side Routes
+ */
 $routes->get('/admin', 'Admin::index');
 $routes->get('/admin/user-management', 'Admin::usermanagement');
 $routes->post('/admin/user-management/add', 'Admin::adduser');
@@ -49,6 +54,13 @@ $routes->post('/admin/user-management/delete', 'Admin::deleteuser');
 
 $routes->post('/admin/account/update/password', 'Admin::updatepassword');
 $routes->post('/admin/account/update/email', 'Admin::updateemail');
+
+$routes->get('/admin/data/peralatan-dan-mesin', 'Admin::pdmdata');
+$routes->post('/admin/data/peralatan-dan-mesin/upload', 'Admin::pdmupload');
+$routes->post('/admin/data/peralatan-dan-mesin/detail', 'Admin::pdmdetail');
+
+
+
 
 
 

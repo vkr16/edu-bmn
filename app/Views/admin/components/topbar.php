@@ -30,7 +30,7 @@
                     </div>
                     <span class="btn btn-primary rounded-1" id="a-editemail" onclick="triggersetting('a')"><i class="fa-solid fa-pen"></i> &nbsp; Edit</span>
                     <span class="btn btn-secondary rounded-1" id="b-editemail" onclick="triggersetting('b')" style="display: none"><i class="fa-solid fa-xmark"></i> &nbsp; Batal</span>
-                    <button type="submit" id="submit-email" class="btn btn-primary rounded-1" style="display: none">Perbarui</button>
+                    <button type="submit" id="submit-email" class="btn btn-primary rounded-1" style="display: none">Perbarui Email</button>
                 </form>
 
                 <br>
@@ -46,7 +46,7 @@
                     <input required type="password" class="form-control" id="ulangPasswordBaru" placeholder="Ulangi Password">
                 </div>
 
-                <button class="btn btn-primary" onclick="setNewPass()">Perbarui</button>
+                <button class="btn btn-primary rounded-1" onclick="setNewPass()">Perbarui Password</button>
 
 
 
@@ -61,7 +61,7 @@
 <style>
     .dropdown-item:hover {
         background-color: #f8f9fa;
-        color: #347A4B !important;
+        color: #e50100 !important;
     }
 </style>
 

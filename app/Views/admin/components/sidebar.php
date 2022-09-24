@@ -7,7 +7,7 @@
             <hr class="mx-2 mb-3 mt-0" style="border-color: #235791">
             <ul class="list-unstyled m-0 p-0">
                 <li>
-                    <a href="<?= HOST_URL ?>/admin/" class="mb-2 px-3 py-2 rounded-1 container-fluid d-flex gap-2 align-items-center sticky-top text-dark sidebar-active text-decoration-none" id="sidebar-item-dashboard">
+                    <a href="<?= HOST_URL ?>/admin/" class="mb-2 px-3 py-2 rounded-1 container-fluid d-flex gap-2 align-items-center sticky-top text-dark sidebar-active text-decoration-none" id="sidebar-item-userman">
                         <div class=" m-0"> <i class="fa-solid fa-users-cog fa-fw"></i> &nbsp; Manajemen Pengguna</div>
                     </a>
                 </li>
@@ -19,32 +19,32 @@
                     <div class="collapse" id="management-collapse">
                         <ul class="btn-toggle-nav list-unstyled">
                             <li>
-                                <a href="<?= HOST_URL ?>/admin/pos" class="mb-2 ps-4 ms-1 py-2 rounded-1 container-fluid d-flex gap-2 align-items-center sticky-top text-dark sidebar-item  text-decoration-none" id="sidebar-item-pos">
-                                    <div class=" m-0"> <i class="fa-solid fa-toolbox fa-fw"></i> &nbsp; Peralatan & Mesin</div>
+                                <a href="<?= HOST_URL ?>/admin/data/peralatan-dan-mesin" class="mb-2 ps-4 ms-1 py-2 rounded-1 container-fluid d-flex gap-2 align-items-center sticky-top text-dark sidebar-item  text-decoration-none" id="sidebar-item-pdm">
+                                    <div class=" m-0"><i class="fa-solid fa-toolbox fa-fw"></i> &nbsp; Peralatan & Mesin</div>
                                 </a>
                             </li>
                             <li>
-                                <a href="<?= HOST_URL ?>/admin/pos" class="mb-2 ps-4 ms-1 py-2 rounded-1 container-fluid d-flex gap-2 align-items-center sticky-top text-dark sidebar-item  text-decoration-none" id="sidebar-item-pos">
+                                <a href="<?= HOST_URL ?>/admin/data/tanah" class="mb-2 ps-4 ms-1 py-2 rounded-1 container-fluid d-flex gap-2 align-items-center sticky-top text-dark sidebar-item  text-decoration-none" id="sidebar-item-tnh">
                                     <div class=" m-0"> <i class="fa-solid fa-flag fa-fw"></i> &nbsp; Tanah</div>
                                 </a>
                             </li>
                             <li>
-                                <a href="<?= HOST_URL ?>/admin/pos" class="mb-2 ps-4 ms-1 py-2 rounded-1 container-fluid d-flex gap-2 align-items-center sticky-top text-dark sidebar-item  text-decoration-none" id="sidebar-item-pos">
+                                <a href="<?= HOST_URL ?>/admin/data/gedung-dan-bangunan" class="mb-2 ps-4 ms-1 py-2 rounded-1 container-fluid d-flex gap-2 align-items-center sticky-top text-dark sidebar-item  text-decoration-none" id="sidebar-item-gdb">
                                     <div class=" m-0"> <i class="fa-solid fa-building fa-fw"></i> &nbsp; Gedung & Bangunan</div>
                                 </a>
                             </li>
                             <li>
-                                <a href="<?= HOST_URL ?>/admin/pos" class="mb-2 ps-4 ms-1 py-2 rounded-1 container-fluid d-flex gap-2 align-items-center sticky-top text-dark sidebar-item  text-decoration-none" id="sidebar-item-pos">
+                                <a href="<?= HOST_URL ?>/admin/data/jalan-irigasi-dan-jaringan" class="mb-2 ps-4 ms-1 py-2 rounded-1 container-fluid d-flex gap-2 align-items-center sticky-top text-dark sidebar-item  text-decoration-none" id="sidebar-item-jij">
                                     <div class=" m-0"> <i class="fa-solid fa-road fa-fw"></i> &nbsp; Jalan, Irigasi & jaringan</div>
                                 </a>
                             </li>
                             <li>
-                                <a href="<?= HOST_URL ?>/admin/pos" class="mb-2 ps-4 ms-1 py-2 rounded-1 container-fluid d-flex gap-2 align-items-center sticky-top text-dark sidebar-item  text-decoration-none" id="sidebar-item-pos">
+                                <a href="<?= HOST_URL ?>/admin/data/aset-tetap-lainnya" class="mb-2 ps-4 ms-1 py-2 rounded-1 container-fluid d-flex gap-2 align-items-center sticky-top text-dark sidebar-item  text-decoration-none" id="sidebar-item-atl">
                                     <div class=" m-0"> <i class="fa-solid fa-thumbtack fa-fw"></i> &nbsp; Aset Tetap Lainnya</div>
                                 </a>
                             </li>
                             <li>
-                                <a href="<?= HOST_URL ?>/admin/pos" class="mb-2 ps-4 ms-1 py-2 rounded-1 container-fluid d-flex gap-2 align-items-center sticky-top text-dark sidebar-item  text-decoration-none" id="sidebar-item-pos">
+                                <a href="<?= HOST_URL ?>/admin/data-konstruksi-dalam-pengerjaan" class="mb-2 ps-4 ms-1 py-2 rounded-1 container-fluid d-flex gap-2 align-items-center sticky-top text-dark sidebar-item  text-decoration-none" id="sidebar-item-kdp">
                                     <div class=" m-0"> <i class="fa-solid fa-person-digging fa-fw"></i> &nbsp; Konstruksi Dalam Pengerjaan </div>
                                 </a>
                             </li>
