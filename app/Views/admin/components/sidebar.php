@@ -44,7 +44,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="<?= HOST_URL ?>/admin/data-konstruksi-dalam-pengerjaan" class="mb-2 ps-4 ms-1 py-2 rounded-1 container-fluid d-flex gap-2 align-items-center sticky-top text-dark sidebar-item  text-decoration-none" id="sidebar-item-kdp">
+                                <a href="<?= HOST_URL ?>/admin/data/konstruksi-dalam-pengerjaan" class="mb-2 ps-4 ms-1 py-2 rounded-1 container-fluid d-flex gap-2 align-items-center sticky-top text-dark sidebar-item  text-decoration-none" id="sidebar-item-kdp">
                                     <div class=" m-0"> <i class="fa-solid fa-person-digging fa-fw"></i> &nbsp; Konstruksi Dalam Pengerjaan </div>
                                 </a>
                             </li>

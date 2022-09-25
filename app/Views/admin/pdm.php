@@ -344,6 +344,13 @@
                 echo "Notiflix.Notify.warning('Email sudah terdaftar pada akun pengguna lain!')";
             }
         }
+        if (isset($_COOKIE['uploaddata'])) {
+            if ($_COOKIE['uploaddata'] == 'success') {
+                echo "Notiflix.Notify.success('Data berhasil di upload')";
+            } elseif ($_COOKIE['uploaddata'] == 'unsupported') {
+                echo "Notiflix.Notify.failure('Jenis file tidak didukung')";
+            }
+        }
         ?>
     </script>
 

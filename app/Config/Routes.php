@@ -60,6 +60,31 @@ $routes->post('/admin/data/peralatan-dan-mesin/upload', 'Admin::pdmupload');
 $routes->post('/admin/data/peralatan-dan-mesin/detail', 'Admin::pdmdetail');
 $routes->post('/admin/data/peralatan-dan-mesin/delete', 'Admin::pdmdelete');
 
+$routes->get('/admin/data/tanah', 'Admin::tnhdata');
+$routes->post('/admin/data/tanah/upload', 'Admin::tnhupload');
+$routes->post('/admin/data/tanah/detail', 'Admin::tnhdetail');
+$routes->post('/admin/data/tanah/delete', 'Admin::tnhdelete');
+
+$routes->get('/admin/data/gedung-dan-bangunan', 'Admin::gdbdata');
+$routes->post('/admin/data/gedung-dan-bangunan/upload', 'Admin::gdbupload');
+$routes->post('/admin/data/gedung-dan-bangunan/detail', 'Admin::gdbdetail');
+$routes->post('/admin/data/gedung-dan-bangunan/delete', 'Admin::gdbdelete');
+
+$routes->get('/admin/data/jalan-irigasi-dan-jaringan', 'Admin::jijdata');
+$routes->post('/admin/data/jalan-irigasi-dan-jaringan/upload', 'Admin::jijupload');
+$routes->post('/admin/data/jalan-irigasi-dan-jaringan/detail', 'Admin::jijdetail');
+$routes->post('/admin/data/jalan-irigasi-dan-jaringan/delete', 'Admin::jijdelete');
+
+$routes->get('/admin/data/aset-tetap-lainnya', 'Admin::atldata');
+$routes->post('/admin/data/aset-tetap-lainnya/upload', 'Admin::atlupload');
+$routes->post('/admin/data/aset-tetap-lainnya/detail', 'Admin::atldetail');
+$routes->post('/admin/data/aset-tetap-lainnya/delete', 'Admin::atldelete');
+
+$routes->get('/admin/data/konstruksi-dalam-pengerjaan', 'Admin::kdpdata');
+$routes->post('/admin/data/konstruksi-dalam-pengerjaan/upload', 'Admin::kdpupload');
+$routes->post('/admin/data/konstruksi-dalam-pengerjaan/detail', 'Admin::kdpdetail');
+$routes->post('/admin/data/konstruksi-dalam-pengerjaan/delete', 'Admin::kdpdelete');
+
 
 
 /** 
@@ -73,6 +98,9 @@ $routes->post('/pdm/data/peralatan-dan-mesin/delete', 'Pdm::pdmdelete');
 
 $routes->post('/pdm/account/update/password', 'Pdm::updatepassword');
 $routes->post('/pdm/account/update/email', 'Pdm::updateemail');
+
+
+
 
 /** 
  * TNH Side Routes
@@ -91,10 +119,10 @@ $routes->post('/tnh/account/update/email', 'Tnh::updateemail');
  * GDB Side Routes
  */
 $routes->get('/gdb', 'Gdb::index');
-$routes->get('/gdb/data/tanah', 'Gdb::gdbdata');
-$routes->post('/gdb/data/tanah/upload', 'Gdb::gdbupload');
-$routes->post('/gdb/data/tanah/detail', 'Gdb::gdbdetail');
-$routes->post('/gdb/data/tanah/delete', 'Gdb::gdbdelete');
+$routes->get('/gdb/data/gedung-dan-bangunan', 'Gdb::gdbdata');
+$routes->post('/gdb/data/gedung-dan-bangunan/upload', 'Gdb::gdbupload');
+$routes->post('/gdb/data/gedung-dan-bangunan/detail', 'Gdb::gdbdetail');
+$routes->post('/gdb/data/gedung-dan-bangunan/delete', 'Gdb::gdbdelete');
 
 $routes->post('/gdb/account/update/password', 'Gdb::updatepassword');
 $routes->post('/gdb/account/update/email', 'Gdb::updateemail');
@@ -103,10 +131,10 @@ $routes->post('/gdb/account/update/email', 'Gdb::updateemail');
  * JIJ Side Routes
  */
 $routes->get('/jij', 'Jij::index');
-$routes->get('/jij/data/tanah', 'Jij::jijdata');
-$routes->post('/jij/data/tanah/upload', 'Jij::jijupload');
-$routes->post('/jij/data/tanah/detail', 'Jij::jijdetail');
-$routes->post('/jij/data/tanah/delete', 'Jij::jijdelete');
+$routes->get('/jij/data/jalan-irigasi-dan-jaringan', 'Jij::jijdata');
+$routes->post('/jij/data/jalan-irigasi-dan-jaringan/upload', 'Jij::jijupload');
+$routes->post('/jij/data/jalan-irigasi-dan-jaringan/detail', 'Jij::jijdetail');
+$routes->post('/jij/data/jalan-irigasi-dan-jaringan/delete', 'Jij::jijdelete');
 
 $routes->post('/jij/account/update/password', 'Jij::updatepassword');
 $routes->post('/jij/account/update/email', 'Jij::updateemail');
@@ -116,10 +144,10 @@ $routes->post('/jij/account/update/email', 'Jij::updateemail');
  * ATL Side Routes
  */
 $routes->get('/atl', 'Atl::index');
-$routes->get('/atl/data/tanah', 'Atl::atldata');
-$routes->post('/atl/data/tanah/upload', 'Atl::atlupload');
-$routes->post('/atl/data/tanah/detail', 'Atl::atldetail');
-$routes->post('/atl/data/tanah/delete', 'Atl::atldelete');
+$routes->get('/atl/data/aset-tetap-lainnya', 'Atl::atldata');
+$routes->post('/atl/data/aset-tetap-lainnya/upload', 'Atl::atlupload');
+$routes->post('/atl/data/aset-tetap-lainnya/detail', 'Atl::atldetail');
+$routes->post('/atl/data/aset-tetap-lainnya/delete', 'Atl::atldelete');
 
 $routes->post('/atl/account/update/password', 'Atl::updatepassword');
 $routes->post('/atl/account/update/email', 'Atl::updateemail');
@@ -129,10 +157,10 @@ $routes->post('/atl/account/update/email', 'Atl::updateemail');
  * KDP Side Routes
  */
 $routes->get('/kdp', 'Kdp::index');
-$routes->get('/kdp/data/tanah', 'Kdp::kdpdata');
-$routes->post('/kdp/data/tanah/upload', 'Kdp::kdpupload');
-$routes->post('/kdp/data/tanah/detail', 'Kdp::kdpdetail');
-$routes->post('/kdp/data/tanah/delete', 'Kdp::kdpdelete');
+$routes->get('/kdp/data/konstruksi-dalam-pengerjaan', 'Kdp::kdpdata');
+$routes->post('/kdp/data/konstruksi-dalam-pengerjaan/upload', 'Kdp::kdpupload');
+$routes->post('/kdp/data/konstruksi-dalam-pengerjaan/detail', 'Kdp::kdpdetail');
+$routes->post('/kdp/data/konstruksi-dalam-pengerjaan/delete', 'Kdp::kdpdelete');
 
 $routes->post('/kdp/account/update/password', 'Kdp::updatepassword');
 $routes->post('/kdp/account/update/email', 'Kdp::updateemail');
