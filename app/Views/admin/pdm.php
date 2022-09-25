@@ -114,57 +114,98 @@
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content rounded-1">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="pdm-detail-modalLabel">UID : 30201010011 </h5>
+                    <h5 class="modal-title" id="pdm-detail-modalLabel">UID : <span id="detail-uid">[ <small>Memuat Data. . . .</small> ]</span> </h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
+
                 <div class="modal-body" id="pdm-detail-body">
                     <div class="d-flex justify-content-start">
                         <span class="fs-4 fw-bold mb-2">Detail Informasi</span>
                     </div>
-                    <dl class="row">
-                        <dt class="col-sm-3">Kode Barang</dt>
-                        <dd class="col-sm-9">3.02.01.01.001</dd>
-
-                        <dt class="col-sm-3">NUP</dt>
-                        <dd class="col-sm-9">1</dd>
-
-                        <dt class="col-sm-3">Kuantitas (m<sup>2</sup> / unit)</dt>
-                        <dd class="col-sm-9">1</dd>
-
-                        <dt class="col-sm-3">Nama / Jenis Barang</dt>
-                        <dd class="col-sm-9">Mini Bus (Penumpang 14 Orang Kebawah)</dd>
-
-                        <dt class="col-sm-3">Nilai Perolehan (Rp)</dt>
-                        <dd class="col-sm-9">Rp 393,775,000</dd>
-
-                        <dt class="col-sm-3">Nomor SK</dt>
-                        <dd class="col-sm-9">55/KM.6/WKN.15/KNL.03/2017</dd>
-
-                        <dt class="col-sm-3">Tanggal SK</dt>
-                        <dd class="col-sm-9">13/02/2018</dd>
-
-                        <dt class="col-sm-3">Instansi Penerbit SK</dt>
-                        <dd class="col-sm-9">Fake Instance For Dummy Data</dd>
-
-                        <dt class="col-sm-3">Digunakan Sesuai Tusi</dt>
-                        <dd class="col-sm-9">Ya</dd>
-
-                        <dt class="col-sm-3">Digunakan Tidak Sesuai Tusi</dt>
-                        <dd class="col-sm-9">-</dd>
-
-                        <dt class="col-sm-3">Digunakan Pihak Lain</dt>
-                        <dd class="col-sm-9">-</dd>
-
-                    </dl>
-                    <div class="text-center">
-                        <img id="theQR" src="https://chart.googleapis.com/chart?cht=qr&chs=200x200&chl=https://demo.akuonline.my.id/pdm?uid=30201010011" alt=""><br>
-
+                    <div class="row g-3">
+                        <div class="col-lg-6">
+                            <p class="text-blue fw-semibold mb-2">Kode Barang</p>
+                            <div class="rounded-1 border px-2 py-1" id="detail-kodebarang">
+                                [ <small>Memuat Data. . . .</small> ]
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <p class="text-blue fw-semibold mb-2">NUP</p>
+                            <div class="rounded-1 border px-2 py-1" id="detail-nup">
+                                [ <small>Memuat Data. . . .</small> ]
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <p class="text-blue fw-semibold mb-2">Kuantitas </p>
+                            <div class="rounded-1 border px-2 py-1" id="detail-kuantitas">
+                                [ <small>Memuat Data. . . .</small> ]
+                            </div>
+                        </div>
+                        <div class="col-lg-9">
+                            <p class="text-blue fw-semibold mb-2">Nama Barang</p>
+                            <div class="rounded-1 border px-2 py-1" id="detail-namabarang">
+                                [ <small>Memuat Data. . . .</small> ]
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <p class="text-blue fw-semibold mb-2">Nilai Perolehan</p>
+                            <div class="rounded-1 border px-2 py-1" id="detail-nilaiperolehan">
+                                [ <small>Memuat Data. . . .</small> ]
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <p class="text-blue fw-semibold mb-2">Nomor SK</p>
+                            <div class="rounded-1 border px-2 py-1" id="detail-nomorsk">
+                                [ <small>Memuat Data. . . .</small> ]
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <p class="text-blue fw-semibold mb-2">Tanggal SK</p>
+                            <div class="rounded-1 border px-2 py-1" id="detail-tanggalsk">
+                                [ <small>Memuat Data. . . .</small> ]
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <p class="text-blue fw-semibold mb-2">Instansi Penerbit SK</p>
+                            <div class="rounded-1 border px-2 py-1" id="detail-instansisk">
+                                [ <small>Memuat Data. . . .</small> ]
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <p class="text-blue fw-semibold mb-2">Sesuai Tusi</p>
+                            <div class="rounded-1 border px-2 py-1" id="detail-sesuai">
+                                [ <small>Memuat Data. . . .</small> ]
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <p class="text-blue fw-semibold mb-2">Tidak Sesuai Tusi (Idle)</p>
+                            <div class="rounded-1 border px-2 py-1" id="detail-tidaksesuai">
+                                [ <small>Memuat Data. . . .</small> ]
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <p class="text-blue fw-semibold mb-2">Digunakan Pihak Lain</p>
+                            <div class="rounded-1 border px-2 py-1" id="detail-pihaklain">
+                                [ <small>Memuat Data. . . .</small> ]
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <p class="text-blue fw-semibold mb-2">Keterangan</p>
+                            <div class="rounded-1 border px-2 py-1" id="detail-keterangan">
+                                [ <small>Memuat Data. . . .</small> ]
+                            </div>
+                        </div>
+                        <div class="col-lg-12 d-flex justify-content-start align-items-center">
+                            <img id="theQR" src="https://chart.googleapis.com/chart?cht=qr&chs=200x200&chl=https://www.edu-bmn.id" alt="">
+                            <button class="btn btn-blue rounded-1" id="qrdownload"><i class="fa-solid fa-qrcode"></i> &nbsp; Download QR Code</button>
+                        </div>
+                    </div>
+                    <p class="text-blue fw-semibold mb-2">Perubahan terakhir pada <span id="detail-lastedited">[ <small>Memuat Data. . . .</small> ]</span> oleh <span id="detail-lasteditor">[ <small>Memuat Data. . . .</small> ]</span></p>
+                    <hr>
+                    <div class="d-flex justify-content-start gap-3">
+                        <button class="btn btn-danger rounded-1" id="pdmdata-delete-btn"><i class="fa-solid fa-trash-can"></i>&nbsp; Hapus</button>
                     </div>
                 </div>
-                <!-- <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div> -->
             </div>
         </div>
     </div>
@@ -211,8 +252,6 @@
                     this.data(i++);
                 });
             }).draw();
-
-            $('#pdm-detail-modal').modal('show')
         });
 
         function pdmdetail(id) {
@@ -225,16 +264,71 @@
                 .done(function(data) {
                     Notiflix.Block.remove('#pdm-detail-body', 500);
                     console.log(data)
+                    const pdmdetail = JSON.parse(data)
+                    $('#detail-uid').html(pdmdetail.uid)
+                    $('#detail-kodebarang').html(pdmdetail.kode_barang)
+                    $('#detail-nup').html(pdmdetail.nup)
+                    $('#detail-kuantitas').html(pdmdetail.kuantitas)
+                    $('#detail-namabarang').html(pdmdetail.nama_barang)
+                    $('#detail-nilaiperolehan').html(pdmdetail.perolehan)
+                    $('#detail-nomorsk').html(pdmdetail.no_sk)
+                    $('#detail-tanggalsk').html(pdmdetail.tanggal_sk)
+                    $('#detail-instansisk').html(pdmdetail.instansi_sk)
+                    $('#detail-sesuai').html(pdmdetail.sesuai)
+                    $('#detail-tidaksesuai').html(pdmdetail.tidak_sesuai)
+                    $('#detail-pihaklain').html(pdmdetail.pihak_lain)
+                    $('#detail-keterangan').html(pdmdetail.keterangan)
+                    $('#detail-lastedited').html(pdmdetail.last_update)
+                    $('#detail-lasteditor').html(pdmdetail.last_editor)
+
+                    // QR LINK TO EDIT
+                    $('#theQR').attr('src', 'https://chart.googleapis.com/chart?cht=qr&chs=200x200&chl=https://www.edu-bmn.id/data/pdm?uid=' + pdmdetail.uid)
+
+                    $('#qrdownload').attr('onclick', 'downloadqr(' + pdmdetail.uid + ')')
+                    $('#pdmdata-delete-btn').attr('onclick', 'deletepdmdata(' + pdmdetail.id + ',' + pdmdetail.uid + ')')
                 });
         }
 
-        function downloadqr() {
+        function deletepdmdata(id, uid) {
+            Notiflix.Confirm.show(
+                'Hapus Data',
+                'Anda yakin ingin menghapus data dengan uid ' + uid + '?',
+                'Yes',
+                'No',
+                function okCb() {
+                    Notiflix.Loading.dots('Memproses. . .');
+                    $.post("peralatan-dan-mesin/delete", {
+                            id: id
+                        })
+                        .done(function(data) {
+                            Notiflix.Loading.remove(1000);
+
+                            setTimeout(function() {
+                                if (data == "deleted") {
+                                    Notiflix.Notify.success('Data berhasil dihapus!')
+                                } else if (data == "failed") {
+                                    Notiflix.Notify.failure('Terjadi kesalahan, data gagal dihapus!')
+                                } else if (data == "not found") {
+                                    Notiflix.Notify.warning('Data tidak ditemukan!')
+                                }
+                            }, 1500);
+
+                            setTimeout(function() {
+                                window.location.reload()
+                            }, 2500);
+                        });
+                },
+                function cancelCb() {}, {},
+            );
+        }
+
+        function downloadqr(uid) {
             domtoimage.toPng(document.getElementById('theQR'), {
                     quality: 0.95
                 })
                 .then(function(dataUrl) {
                     var link = document.createElement('a');
-                    link.download = 'qrCode.png';
+                    link.download = uid + '.png';
                     link.href = dataUrl;
                     link.click();
                 });

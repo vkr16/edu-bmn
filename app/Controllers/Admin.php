@@ -260,9 +260,24 @@ class Admin extends BaseController
             'pihak_lain' => $detail['pihak_lain'],
             'keterangan' => $detail['keterangan'],
             'last_editor' => $editor['name'],
-            'last_update' => $detail['updated_at'],
+            'last_update' => date_format(date_create($detail['updated_at']), 'd/m/Y H:i:s '),
         ];
 
         return json_encode($data);
+    }
+
+    public function pdmdelete()
+    {
+        $id = $_POST['id'];
+
+        if ($this->pdmModel->find($id)) {
+            if ($this->pdmModel->delete($id)) {
+                return 'deleted';
+            } else {
+                return 'failed';
+            }
+        } else {
+            return 'notfound';
+        }
     }
 }

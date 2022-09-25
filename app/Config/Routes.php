@@ -58,6 +58,7 @@ $routes->post('/admin/account/update/email', 'Admin::updateemail');
 $routes->get('/admin/data/peralatan-dan-mesin', 'Admin::pdmdata');
 $routes->post('/admin/data/peralatan-dan-mesin/upload', 'Admin::pdmupload');
 $routes->post('/admin/data/peralatan-dan-mesin/detail', 'Admin::pdmdetail');
+$routes->post('/admin/data/peralatan-dan-mesin/delete', 'Admin::pdmdelete');
 
 
 
