@@ -9,6 +9,7 @@ use CodeIgniter\Filters\Honeypot;
 use CodeIgniter\Filters\InvalidChars;
 use CodeIgniter\Filters\SecureHeaders;
 use App\Filters\Adminauth;
+use App\Filters\Pdmauth;
 
 class Filters extends BaseConfig
 {
@@ -25,6 +26,7 @@ class Filters extends BaseConfig
         'invalidchars'  => InvalidChars::class,
         'secureheaders' => SecureHeaders::class,
         'adminauth'     => Adminauth::class,
+        'pdmauth'       => Pdmauth::class,
     ];
 
     /**
@@ -72,5 +74,6 @@ class Filters extends BaseConfig
      */
     public $filters = [
         'adminauth' => ['before' => ['admin', 'admin/*']],
+        'pdmauth' => ['before' => ['pdm', 'pdm/*']],
     ];
 }

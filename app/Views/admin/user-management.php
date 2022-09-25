@@ -53,7 +53,7 @@
                                                 <td></td>
                                                 <td><?= $user['name']; ?></td>
                                                 <td><?= $user['email']; ?></td>
-                                                <td><?= $user['role']; ?></td>
+                                                <td style="text-transform: uppercase"><?= $user['role']; ?></td>
                                                 <td>
                                                     <button class="btn btn-primary btn-sm rounded-1 mb-1" onclick="edituser(<?= $user['id']; ?>,'<?= $user['name']; ?>','<?= $user['email']; ?>','<?= $user['role']; ?>')">
                                                         <i class="fa-solid fa-user-pen"></i>
@@ -280,8 +280,6 @@
             $('#reset-password-modal').modal('show')
             $('#hiddenIdReset').val(id)
             $('#inputEmailReset').val(email)
-
-
         }
 
         <?php

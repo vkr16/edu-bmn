@@ -22,7 +22,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form action="<?= HOST_URL ?>/admin/account/update/email" method="POST">
+                <form action="<?= HOST_URL ?>/pdm/account/update/email" method="POST">
                     <input type="text" hidden value="<?= $session[0]['id']; ?>" name="id">
                     <div class="mb-3">
                         <label for="changeEmail" class="form-label">Email</label>
@@ -92,7 +92,7 @@
             $('#ulangPasswordBaru').removeClass('is-invalid')
             Notiflix.Loading.dots('Memproses. . .');
 
-            $.post("<?= HOST_URL ?>/admin/account/update/password", {
+            $.post("<?= HOST_URL ?>/pdm/account/update/password", {
                     password: a,
                     id: <?= $session[0]['id']; ?>
                 })

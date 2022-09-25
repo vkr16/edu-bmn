@@ -6,14 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Peralatan Dan Mesin</title>
-    <?= $this->include('admin/components/links'); ?>
+    <?= $this->include('user/pdm/components/links'); ?>
 </head>
 
 <body class="font-nunito">
     <div class="d-flex">
-        <?= $this->include('admin/components/sidebar'); ?>
+        <?= $this->include('user/pdm/components/sidebar'); ?>
         <section class="vh-100 w-100 scrollable-y">
-            <?= $this->include('admin/components/topbar'); ?>
+            <?= $this->include('user/pdm/components/topbar'); ?>
             <div class="w-100 mb-5 pb-5 mt-4">
                 <div class="container-lg px-4">
                     <!-- main content here-->
@@ -21,7 +21,7 @@
                         <h3>Manajemen Data Peralatan Dan Mesin</h3>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item">Admin</li>
+                                <li class="breadcrumb-item">PDM</li>
                                 <li class="breadcrumb-item">Manajemen Data</li>
                                 <li class="breadcrumb-item active" aria-current="page">Peralatan Dan Mesin</li>
                             </ol>
@@ -210,7 +210,7 @@
         </div>
     </div>
 
-    <?= $this->include('admin/components/scripts'); ?>
+    <?= $this->include('user/pdm/components/scripts'); ?>
     <script src="<?= ASSETS_URL ?>/js/dom-to-image/src/dom-to-image.js"></script>
     <script>
         // Activate the sidebar item

@@ -62,6 +62,18 @@ $routes->post('/admin/data/peralatan-dan-mesin/delete', 'Admin::pdmdelete');
 
 
 
+/** 
+ * PDM Side Routes
+ */
+$routes->get('/pdm', 'Pdm::index');
+$routes->get('/pdm/data/peralatan-dan-mesin', 'Pdm::pdmdata');
+$routes->post('/pdm/data/peralatan-dan-mesin/upload', 'Pdm::pdmupload');
+$routes->post('/pdm/data/peralatan-dan-mesin/detail', 'Pdm::pdmdetail');
+$routes->post('/pdm/data/peralatan-dan-mesin/delete', 'Pdm::pdmdelete');
+
+$routes->post('/pdm/account/update/password', 'Pdm::updatepassword');
+$routes->post('/pdm/account/update/email', 'Pdm::updateemail');
+
 
 
 
