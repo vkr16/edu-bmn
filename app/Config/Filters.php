@@ -10,6 +10,11 @@ use CodeIgniter\Filters\InvalidChars;
 use CodeIgniter\Filters\SecureHeaders;
 use App\Filters\Adminauth;
 use App\Filters\Pdmauth;
+use App\Filters\Tnhauth;
+use App\Filters\Gdbauth;
+use App\Filters\Jijauth;
+use App\Filters\Atlauth;
+use App\Filters\Kdpauth;
 
 class Filters extends BaseConfig
 {
@@ -27,6 +32,11 @@ class Filters extends BaseConfig
         'secureheaders' => SecureHeaders::class,
         'adminauth'     => Adminauth::class,
         'pdmauth'       => Pdmauth::class,
+        'tnhauth'       => Tnhauth::class,
+        'gdbauth'       => Gdbauth::class,
+        'jijauth'       => Jijauth::class,
+        'atlauth'       => Atlauth::class,
+        'kdpauth'       => Kdpauth::class,
     ];
 
     /**
@@ -75,5 +85,10 @@ class Filters extends BaseConfig
     public $filters = [
         'adminauth' => ['before' => ['admin', 'admin/*']],
         'pdmauth' => ['before' => ['pdm', 'pdm/*']],
+        'tnhauth' => ['before' => ['tnh', 'tnh/*']],
+        'gdbauth' => ['before' => ['gdb', 'gdb/*']],
+        'jijauth' => ['before' => ['jij', 'jij/*']],
+        'atlauth' => ['before' => ['atl', 'atl/*']],
+        'kdpauth' => ['before' => ['kdp', 'kdp/*']],
     ];
 }

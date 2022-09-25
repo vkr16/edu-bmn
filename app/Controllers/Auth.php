@@ -24,6 +24,16 @@ class Auth extends BaseController
                 return redirect()->to(HOST_URL . '/admin');
             } elseif ($user[0]['role'] == 'pdm') {
                 return redirect()->to(HOST_URL . '/pdm');
+            } elseif ($user[0]['role'] == 'tnh') {
+                return redirect()->to(HOST_URL . '/tnh');
+            } elseif ($user[0]['role'] == 'gdb') {
+                return redirect()->to(HOST_URL . '/gdb');
+            } elseif ($user[0]['role'] == 'jij') {
+                return redirect()->to(HOST_URL . '/jij');
+            } elseif ($user[0]['role'] == 'atl') {
+                return redirect()->to(HOST_URL . '/atl');
+            } elseif ($user[0]['role'] == 'kdp') {
+                return redirect()->to(HOST_URL . '/kdp');
             } // more else if here if needed
             else {
                 return redirect()->to(HOST_URL . '/logout');

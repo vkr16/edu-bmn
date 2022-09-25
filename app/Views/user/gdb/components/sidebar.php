@@ -7,8 +7,8 @@
             <hr class="mx-2 mb-3 mt-0" style="border-color: #235791">
             <ul class="list-unstyled m-0 p-0">
                 <li>
-                    <a href="<?= HOST_URL ?>/pdm/data/peralatan-dan-mesin" class="mb-2 ps-4 ms-1 py-2 rounded-1 container-fluid d-flex gap-2 align-items-center sticky-top text-dark sidebar-item  text-decoration-none" id="sidebar-item-pdm">
-                        <div class=" m-0"><i class="fa-solid fa-toolbox fa-fw"></i> &nbsp; Peralatan & Mesin</div>
+                    <a href="<?= HOST_URL ?>/gdb/data/gedung-dan-bangunan" class="mb-2 ps-4 ms-1 py-2 rounded-1 container-fluid d-flex gap-2 align-items-center sticky-top text-dark sidebar-item  text-decoration-none" id="sidebar-item-gdb">
+                        <div class=" m-0"> <i class="fa-solid fa-building fa-fw"></i> &nbsp; Gedung & Bangunan</div>
                     </a>
                 </li>
             </ul>

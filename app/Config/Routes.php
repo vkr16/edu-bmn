@@ -74,6 +74,80 @@ $routes->post('/pdm/data/peralatan-dan-mesin/delete', 'Pdm::pdmdelete');
 $routes->post('/pdm/account/update/password', 'Pdm::updatepassword');
 $routes->post('/pdm/account/update/email', 'Pdm::updateemail');
 
+/** 
+ * TNH Side Routes
+ */
+$routes->get('/tnh', 'Tnh::index');
+$routes->get('/tnh/data/tanah', 'Tnh::tnhdata');
+$routes->post('/tnh/data/tanah/upload', 'Tnh::tnhupload');
+$routes->post('/tnh/data/tanah/detail', 'Tnh::tnhdetail');
+$routes->post('/tnh/data/tanah/delete', 'Tnh::tnhdelete');
+
+$routes->post('/tnh/account/update/password', 'Tnh::updatepassword');
+$routes->post('/tnh/account/update/email', 'Tnh::updateemail');
+
+
+/** 
+ * GDB Side Routes
+ */
+$routes->get('/gdb', 'Gdb::index');
+$routes->get('/gdb/data/tanah', 'Gdb::gdbdata');
+$routes->post('/gdb/data/tanah/upload', 'Gdb::gdbupload');
+$routes->post('/gdb/data/tanah/detail', 'Gdb::gdbdetail');
+$routes->post('/gdb/data/tanah/delete', 'Gdb::gdbdelete');
+
+$routes->post('/gdb/account/update/password', 'Gdb::updatepassword');
+$routes->post('/gdb/account/update/email', 'Gdb::updateemail');
+
+/** 
+ * JIJ Side Routes
+ */
+$routes->get('/jij', 'Jij::index');
+$routes->get('/jij/data/tanah', 'Jij::jijdata');
+$routes->post('/jij/data/tanah/upload', 'Jij::jijupload');
+$routes->post('/jij/data/tanah/detail', 'Jij::jijdetail');
+$routes->post('/jij/data/tanah/delete', 'Jij::jijdelete');
+
+$routes->post('/jij/account/update/password', 'Jij::updatepassword');
+$routes->post('/jij/account/update/email', 'Jij::updateemail');
+
+
+/** 
+ * ATL Side Routes
+ */
+$routes->get('/atl', 'Atl::index');
+$routes->get('/atl/data/tanah', 'Atl::atldata');
+$routes->post('/atl/data/tanah/upload', 'Atl::atlupload');
+$routes->post('/atl/data/tanah/detail', 'Atl::atldetail');
+$routes->post('/atl/data/tanah/delete', 'Atl::atldelete');
+
+$routes->post('/atl/account/update/password', 'Atl::updatepassword');
+$routes->post('/atl/account/update/email', 'Atl::updateemail');
+
+
+/** 
+ * KDP Side Routes
+ */
+$routes->get('/kdp', 'Kdp::index');
+$routes->get('/kdp/data/tanah', 'Kdp::kdpdata');
+$routes->post('/kdp/data/tanah/upload', 'Kdp::kdpupload');
+$routes->post('/kdp/data/tanah/detail', 'Kdp::kdpdetail');
+$routes->post('/kdp/data/tanah/delete', 'Kdp::kdpdelete');
+
+$routes->post('/kdp/account/update/password', 'Kdp::updatepassword');
+$routes->post('/kdp/account/update/email', 'Kdp::updateemail');
+
+
+
+
+
+
+/**
+ * Outsider Side Routes
+ */
+$routes->get('/data/pdm', 'Home::pdmdata');
+
+
 
 
 

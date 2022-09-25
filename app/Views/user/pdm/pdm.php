@@ -196,7 +196,7 @@
                             </div>
                         </div>
                         <div class="col-lg-12 d-flex justify-content-start align-items-center">
-                            <img id="theQR" src="https://chart.googleapis.com/chart?cht=qr&chs=200x200&chl=https://www.edu-bmn.id" alt="">
+                            <img id="theQR" src="https://chart.googleapis.com/chart?cht=qr&chs=200x200&chl=<?= HOST_URL ?>" alt="">
                             <button class="btn btn-blue rounded-1" id="qrdownload"><i class="fa-solid fa-qrcode"></i> &nbsp; Download QR Code</button>
                         </div>
                     </div>
@@ -282,7 +282,7 @@
                     $('#detail-lasteditor').html(pdmdetail.last_editor)
 
                     // QR LINK TO EDIT
-                    $('#theQR').attr('src', 'https://chart.googleapis.com/chart?cht=qr&chs=200x200&chl=https://www.edu-bmn.id/data/pdm?uid=' + pdmdetail.uid)
+                    $('#theQR').attr('src', 'https://chart.googleapis.com/chart?cht=qr&chs=200x200&chl=<?= HOST_URL ?>/data/pdm?uid=' + pdmdetail.uid)
 
                     $('#qrdownload').attr('onclick', 'downloadqr(' + pdmdetail.uid + ')')
                     $('#pdmdata-delete-btn').attr('onclick', 'deletepdmdata(' + pdmdetail.id + ',' + pdmdetail.uid + ')')

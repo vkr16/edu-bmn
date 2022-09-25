@@ -109,7 +109,7 @@
                             <select class="form-select rounded-1" id="selectRole" required name="role">
                                 <option value="">Pilih Hak Akses</option>
                                 <option value="admin">Admin</option>
-                                <option value="pdb">Peralatan dan Mesin</option>
+                                <option value="pdm">Peralatan dan Mesin</option>
                                 <option value="tnh">Tanah</option>
                                 <option value="gdb">Gedung dan Bangunan</option>
                                 <option value="jij">Jalan, Irigasi, dan Jaringan</option>

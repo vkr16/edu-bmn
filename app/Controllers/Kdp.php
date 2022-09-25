@@ -4,30 +4,30 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 
-class Pdm extends BaseController
+class Kdp extends BaseController
 {
     protected $session;
     protected $userModel;
-    protected $pdmModel;
+    protected $kdpModel;
     function __construct()
     {
         $this->session = \Config\Services::session();
         $this->userModel = model('UserModel', true, $db);
-        $this->pdmModel = model('PdmModel', true, $db);
+        $this->kdpModel = model('KdpModel', true, $db);
     }
     public function index()
     {
-        return redirect()->to(HOST_URL . '/pdm/data/peralatan-dan-mesin');
+        return redirect()->to(HOST_URL . '/kdp/data/tanah');
     }
 
-    public function pdmdata()
+    public function kdpdata()
     {
         $data['session'] = $this->userModel->where('email', $this->session->get('dbmn_user_session'))->find();
-        $data['pdmdata'] = $this->pdmModel->findAll();
-        return view('user/pdm/pdm', $data);
+        $data['kdpdata'] = $this->kdpModel->findAll();
+        return view('user/kdp/kdp', $data);
     }
 
-    public function pdmupload()
+    public function kdpupload()
     {
         // Allowed mime types
         $fileMimes = array(
@@ -62,7 +62,7 @@ class Pdm extends BaseController
                 if ($datacsv[0] != '' && $datacsv[2] != '') {
                     $uid = str_replace(".", '', $datacsv[2]) . $datacsv[3];
                     var_dump($uid);
-                    if ($this->pdmModel->where('uid', $uid)->find()) {
+                    if ($this->kdpModel->where('uid', $uid)->find()) {
                         $data = [
                             'nama_barang' => $datacsv[4],
                             'kuantitas' => $datacsv[5],
@@ -76,7 +76,7 @@ class Pdm extends BaseController
                             'keterangan' => $datacsv[13],
                             'last_editor' => $session_data[0]['id'],
                         ];
-                        $this->pdmModel->where('uid', $uid)->set($data)->update();
+                        $this->kdpModel->where('uid', $uid)->set($data)->update();
                     } else {
                         $data = [
                             'uid' => $uid,
@@ -94,19 +94,19 @@ class Pdm extends BaseController
                             'keterangan' => $datacsv[13],
                             'last_editor' => $session_data[0]['id'],
                         ];
-                        $this->pdmModel->insert($data);
+                        $this->kdpModel->insert($data);
                     }
                 }
             }
         }
-        return redirect()->to(HOST_URL . '/pdm/data/peralatan-dan-mesin');
+        return redirect()->to(HOST_URL . '/kdp/data/peralatan-dan-mesin');
     }
 
-    public function pdmdetail()
+    public function kdpdetail()
     {
         $id = $_POST['id'];
 
-        $detail = $this->pdmModel->find($id);
+        $detail = $this->kdpModel->find($id);
         $editor = $this->userModel->find($detail['last_editor']);
 
         $data = [
@@ -131,12 +131,12 @@ class Pdm extends BaseController
         return json_encode($data);
     }
 
-    public function pdmdelete()
+    public function kdpdelete()
     {
         $id = $_POST['id'];
 
-        if ($this->pdmModel->find($id)) {
-            if ($this->pdmModel->delete($id)) {
+        if ($this->kdpModel->find($id)) {
+            if ($this->kdpModel->delete($id)) {
                 return 'deleted';
             } else {
                 return 'failed';
@@ -179,6 +179,6 @@ class Pdm extends BaseController
                 }
             }
         }
-        return redirect()->to(HOST_URL . '/pdm');
+        return redirect()->to(HOST_URL . '/kdp');
     }
 }
