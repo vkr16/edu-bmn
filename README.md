@@ -89,4 +89,6 @@ If you have any questions about this project or would like to discuss a potentia
 
 Thank you for taking the time to review my project portfolio!
 
-#
+<hr>
+<p align="center">&copy; 2022 Fikri Miftah Akmaludin </p>
+# 
