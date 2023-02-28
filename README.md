@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://raw.githubusercontent.com/vkr16/edu-bmn/main/public/assets/img/logo.png?token=GHSAT0AAAAAAB6A5CZ63LDLK66X4A7BXSLUY75ZXSQ" alt"IAIN Parepare logo" width="20%"></img>
+<img src="public/assets/img/logo.png" alt"IAIN Parepare logo" width="20%"></img>
 <br>
 <div align="center">
 <img src="https://img.shields.io/badge/App Version-1.0-orange"></img> &nbsp; 
