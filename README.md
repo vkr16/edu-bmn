@@ -60,7 +60,7 @@ This project is meant to showcase my skills and experience as a freelance develo
 
 ## Installation Guide
 
-1. [Download the latest release](https://github.com/vkr16/edu-bmn/releases)
+1. [Download the portfolio release here](https://github.com/vkr16/edu-bmn/releases/tag/v1.0-portfolio)
 2. Extract the zip to your server or localhost directory
 3. Import `db-edu-bmn.sql` to your database server
 4. Configure these variable in .env file
