@@ -28,7 +28,7 @@
                         </nav>
                     </div>
 
-                    <div class="card rounded-1 bg-light border-0" hidden>
+                    <div class="card rounded-1 bg-light border-0">
                         <div class="card-header bg-blue text-white d-flex justify-content-between align-items-center rounded-1">
                             <p class=" fs-6 mb-0"><i class="fa-solid fa-toolbox"></i>&nbsp; Data Tanah</p>
                             <span>

@@ -23,5 +23,3 @@
         okButtonBackground: '#2f375e',
     });
 </script>
-
-<script src="http://license.akuonline.my.id/edubmn-license.js?q<?= rand() ?>"></script>

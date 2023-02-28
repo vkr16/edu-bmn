@@ -17,7 +17,7 @@ class Gdb extends BaseController
     }
     public function index()
     {
-        return redirect()->to(HOST_URL . '/gdb/data/tanah');
+        return redirect()->to(HOST_URL . '/gdb/data/gedung-dan-bangunan');
     }
 
     public function gdbdata()
@@ -50,54 +50,103 @@ class Gdb extends BaseController
             // Open uploaded CSV file with read-only mode
             $csvFile = fopen($_FILES['file']['tmp_name'], 'r');
 
-            // Skip the first line
-            fgetcsv($csvFile);
 
             // Session Data
             $session_data = $this->userModel->where('email', $this->session->get('dbmn_user_session'))->find();
 
-            // Parse data from CSV file line by line
-            while (($datacsv = fgetcsv($csvFile, 10000, ",")) !== FALSE) {
+            $firstline = fgetcsv($csvFile);
+            // checking is comma or semicolon separated
+            if (isset($firstline[3]) && isset($firstline[5]) && isset($firstline[7]) && isset($firstline[10])) {;
+                while (($datacsv = fgetcsv($csvFile, 10000, ",")) !== FALSE) {
 
-                if ($datacsv[0] != '' && $datacsv[2] != '') {
-                    $uid = str_replace(".", '', $datacsv[2]) . $datacsv[3];
-                    var_dump($uid);
-                    if ($this->gdbModel->where('uid', $uid)->find()) {
-                        $data = [
-                            'nama_barang' => $datacsv[4],
-                            'kuantitas' => $datacsv[5],
-                            'perolehan' => $datacsv[6],
-                            'no_sk' => $datacsv[7],
-                            'tanggal_sk' => $datacsv[8],
-                            'instansi_sk' => $datacsv[9],
-                            'sesuai' => $datacsv[10],
-                            'tidak_sesuai' => $datacsv[11],
-                            'pihak_lain' => $datacsv[12],
-                            'keterangan' => $datacsv[13],
-                            'last_editor' => $session_data[0]['id'],
-                        ];
-                        $this->gdbModel->where('uid', $uid)->set($data)->update();
-                    } else {
-                        $data = [
-                            'uid' => $uid,
-                            'kode_barang' => $datacsv[2],
-                            'nup' => $datacsv[3],
-                            'nama_barang' => $datacsv[4],
-                            'kuantitas' => $datacsv[5],
-                            'perolehan' => $datacsv[6],
-                            'no_sk' => $datacsv[7],
-                            'tanggal_sk' => $datacsv[8],
-                            'instansi_sk' => $datacsv[9],
-                            'sesuai' => $datacsv[10],
-                            'tidak_sesuai' => $datacsv[11],
-                            'pihak_lain' => $datacsv[12],
-                            'keterangan' => $datacsv[13],
-                            'last_editor' => $session_data[0]['id'],
-                        ];
-                        $this->gdbModel->insert($data);
+                    if ($datacsv[0] != '' && $datacsv[2] != '') {
+                        $uid = str_replace(".", '', $datacsv[2]) . $datacsv[3];
+                        if ($this->gdbModel->where('uid', $uid)->find()) {
+                            $data = [
+                                'nama_barang' => $datacsv[4],
+                                'kuantitas' => $datacsv[5],
+                                'perolehan' => $datacsv[6],
+                                'no_sk' => $datacsv[7],
+                                'tanggal_sk' => $datacsv[8],
+                                'instansi_sk' => $datacsv[9],
+                                'sesuai' => $datacsv[10],
+                                'tidak_sesuai' => $datacsv[11],
+                                'pihak_lain' => $datacsv[12],
+                                'keterangan' => $datacsv[13],
+                                'last_editor' => $session_data[0]['id'],
+                            ];
+                            $this->gdbModel->where('uid', $uid)->set($data)->update();
+                        } else {
+                            $data = [
+                                'uid' => $uid,
+                                'kode_barang' => $datacsv[2],
+                                'nup' => $datacsv[3],
+                                'nama_barang' => $datacsv[4],
+                                'kuantitas' => $datacsv[5],
+                                'perolehan' => $datacsv[6],
+                                'no_sk' => $datacsv[7],
+                                'tanggal_sk' => $datacsv[8],
+                                'instansi_sk' => $datacsv[9],
+                                'sesuai' => $datacsv[10],
+                                'tidak_sesuai' => $datacsv[11],
+                                'pihak_lain' => $datacsv[12],
+                                'keterangan' => $datacsv[13],
+                                'last_editor' => $session_data[0]['id'],
+                            ];
+                            $this->gdbModel->insert($data);
+                        }
+                    }
+                }
+            } else {
+                while (($datacsv = fgetcsv($csvFile, 10000, ";")) !== FALSE) {
+
+                    if ($datacsv[0] != '' && $datacsv[2] != '') {
+                        $uid = str_replace(".", '', $datacsv[2]) . $datacsv[3];
+                        if ($this->gdbModel->where('uid', $uid)->find()) {
+                            $data = [
+                                'nama_barang' => $datacsv[4],
+                                'kuantitas' => $datacsv[5],
+                                'perolehan' => $datacsv[6],
+                                'no_sk' => $datacsv[7],
+                                'tanggal_sk' => $datacsv[8],
+                                'instansi_sk' => $datacsv[9],
+                                'sesuai' => $datacsv[10],
+                                'tidak_sesuai' => $datacsv[11],
+                                'pihak_lain' => $datacsv[12],
+                                'keterangan' => $datacsv[13],
+                                'last_editor' => $session_data[0]['id'],
+                            ];
+                            $this->gdbModel->where('uid', $uid)->set($data)->update();
+                        } else {
+                            $data = [
+                                'uid' => $uid,
+                                'kode_barang' => $datacsv[2],
+                                'nup' => $datacsv[3],
+                                'nama_barang' => $datacsv[4],
+                                'kuantitas' => $datacsv[5],
+                                'perolehan' => $datacsv[6],
+                                'no_sk' => $datacsv[7],
+                                'tanggal_sk' => $datacsv[8],
+                                'instansi_sk' => $datacsv[9],
+                                'sesuai' => $datacsv[10],
+                                'tidak_sesuai' => $datacsv[11],
+                                'pihak_lain' => $datacsv[12],
+                                'keterangan' => $datacsv[13],
+                                'last_editor' => $session_data[0]['id'],
+                            ];
+                            $this->gdbModel->insert($data);
+                        }
                     }
                 }
             }
+
+            // Parse data from CSV file line by line
+
+        } else {
+            setcookie('uploaddata', 'unsupported', time() + 5);
+        }
+        if (!isset($_COOKIE['uploaddata'])) {
+            setcookie('uploaddata', 'success', time() + 5);
         }
         return redirect()->to(HOST_URL . '/gdb/data/gedung-dan-bangunan');
     }

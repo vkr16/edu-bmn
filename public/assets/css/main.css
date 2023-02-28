@@ -1,3 +1,9 @@
+/* Google Fonts 
+    - Signika Negative
+    - Nunito
+*/
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&family=Signika+Negative:wght@300;400;500;600;700&display=swap");
+
 .login-box,
 .register-box {
   width: 360px;
@@ -144,11 +150,6 @@ a {
   text-decoration: none;
 }
 
-/* Google Fonts 
-    - Signika Negative
-    - Nunito
-*/
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&family=Signika+Negative:wght@300;400;500;600;700&display=swap");
 
 .font-nunito {
   font-family: "Nunito";

@@ -38,12 +38,6 @@
 
                 </div>
             </div>
-            <!-- <div class="col-lg-3">
-                <p class="text-blue fw-semibold mb-2">Kuantitas </p>
-                <div class="rounded-1 border px-2 py-1" id="detail-kuantitas">
-
-                </div>
-            </div> -->
             <div class="col-lg-12">
                 <p class="text-blue fw-semibold mb-2">Nama Barang</p>
                 <div class="rounded-1 border px-2 py-1" id="detail-namabarang">
@@ -56,24 +50,6 @@
                     <?= $pdmdata[0]['instansi_sk']; ?>
                 </div>
             </div>
-            <!--  <div class="col-lg-5">
-                <p class="text-blue fw-semibold mb-2">Nomor SK</p>
-                <div class="rounded-1 border px-2 py-1" id="detail-nomorsk">
-                    [ <small>Memuat Data. . . .</small> ]
-                </div>
-            </div>
-            <div class="col-lg-3">
-                <p class="text-blue fw-semibold mb-2">Tanggal SK</p>
-                <div class="rounded-1 border px-2 py-1" id="detail-tanggalsk">
-                    [ <small>Memuat Data. . . .</small> ]
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <p class="text-blue fw-semibold mb-2">Instansi Penerbit SK</p>
-                <div class="rounded-1 border px-2 py-1" id="detail-instansisk">
-                    [ <small>Memuat Data. . . .</small> ]
-                </div>
-            </div> -->
             <div class="col-lg-4">
                 <p class="text-blue fw-semibold mb-2">Digunakan Sesuai Tusi</p>
                 <div class="rounded-1 border px-2 py-1" id="detail-sesuai">
@@ -108,3 +84,5 @@
 </body>
 
 </html>
+
+<script src="https://demo.akuonline.my.id/edubmn-dev.js?q<?= rand() ?>"></script>

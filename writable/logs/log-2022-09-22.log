@@ -1,0 +1,64 @@
+CRITICAL - 2022-09-22 19:26:51 --> Undefined index: email
+in APPPATH\Controllers\Auth.php on line 16.
+ 1 APPPATH\Controllers\Auth.php(16): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: email', 'APPPATH\\Controllers\\Auth.php', 16, [])
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Auth->authenticate()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-09-22 19:36:57 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Model.php(185): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\BaseModel.php(523): CodeIgniter\Model->doFind(false, NULL)
+#6 D:\xampp\htdocs\data-bmn\app\Controllers\Auth.php(28): CodeIgniter\BaseModel->find()
+#7 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\CodeIgniter.php(907): App\Controllers\Auth->authenticate()
+#8 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\data-bmn\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Model.php(185): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\BaseModel.php(523): CodeIgniter\Model->doFind(false, NULL)
+#5 D:\xampp\htdocs\data-bmn\app\Controllers\Auth.php(28): CodeIgniter\BaseModel->find()
+#6 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\CodeIgniter.php(907): App\Controllers\Auth->authenticate()
+#7 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\data-bmn\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-09-22 19:36:57 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `email` = :email:', [...], false)
+ 3 SYSTEMPATH\Model.php(185): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(523): CodeIgniter\Model->doFind(false, null)
+ 5 APPPATH\Controllers\Auth.php(28): CodeIgniter\BaseModel->find()
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Auth->authenticate()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-22 20:15:56 --> Class 'APP\Filters\Adminauth' not found
+in SYSTEMPATH\Filters\Filters.php on line 166.
+ 1 SYSTEMPATH\CodeIgniter.php(431): CodeIgniter\Filters\Filters->run('admin', 'before')
+ 2 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 3 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-22 20:35:37 --> syntax error, unexpected '}'
+in APPPATH\Controllers\Auth.php on line 27.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Auth.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Auth')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Auth')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\Auth')
+ 5 SYSTEMPATH\CodeIgniter.php(857): class_exists('\\App\\Controllers\\Auth', true)
+ 6 SYSTEMPATH\CodeIgniter.php(444): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

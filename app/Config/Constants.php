@@ -103,6 +103,6 @@ if (!empty($_SERVER['HTTPS']) && ('on' == $_SERVER['HTTPS'])) {
     // $HTTProtocol = 'http://';
     $HTTProtocol = 'http://';
 }
-define('HOST_URL', $HTTProtocol . $_SERVER['SERVER_NAME'] . '/data-bmn');
+define('HOST_URL', $HTTProtocol . $_SERVER['SERVER_NAME'] . ':8074/edu-bmn');
 define('ASSETS_URL', HOST_URL . '/public/assets');
 define('IMAGES_URL', ASSETS_URL . '/img');

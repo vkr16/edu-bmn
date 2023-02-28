@@ -1,64 +1,92 @@
-# CodeIgniter 4 Application Starter
+<p align="center">
+<img src="https://raw.githubusercontent.com/vkr16/edu-bmn/main/public/assets/img/logo.png?token=GHSAT0AAAAAAB6A5CZ63LDLK66X4A7BXSLUY75ZXSQ" alt"IAIN Parepare logo" width="20%"></img>
+<br>
+<div align="center">
+<img src="https://img.shields.io/badge/App Version-1.0-orange"></img> &nbsp; 
+<img src="https://img.shields.io/badge/PHP%20Version-7.4-blue"></img> &nbsp;
+<img src="https://img.shields.io/badge/CodeIgniter-4.2.6-red"></img> &nbsp;
+<img src="https://img.shields.io/badge/Bootstrap-5.2.1-blueviolet"></img> &nbsp;
+<img src="https://img.shields.io/badge/JQuery-3.6.1-blue"></img> &nbsp;
+</div>
+</p>
 
-## What is CodeIgniter?
+# Project Portfolio: Edu-BMN
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](http://codeigniter.com).
+Welcome to my portfolio project repository! This is a work of mine that I've done on the Edu-BMN project as a freelancer.
 
-This repository holds a composer-installable app starter.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+# Project Overview
 
-More information about the plans for version 4 can be found in [the announcement](http://forum.codeigniter.com/thread-62615.html) on the forums.
+Edu-BMN is an asset management system that manages state-owned property data managed by the Parepare State Islamic Religious Institute. In this project, I was responsible for developing the web application using PHP programming language and CodeIgniter 4 as the main back-end programming stack and also using HTML, CSS, Bootstrap, JavaScript, Jquery and some other js library to build it's front-end.
 
-The user guide corresponding to this version of the framework can be found
-[here](https://codeigniter4.github.io/userguide/).
+# Project Details
 
-## Installation & updates
+Here are some of the details of the project:
 
-`composer create-project codeigniter4/appstarter` then `composer update` whenever
-there is a new release of the framework.
+- Client: Institut Agama Islam Negeri Parepare
+- Duration: around 1 week
 
-When updating, check the release notes to see if there are any changes you might need to apply
-to your `app` folder. The affected files can be copied or merged from
-`vendor/codeigniter4/framework/app`.
+## Technologies
 
-## Setup
+- PHP 7.4
+- CodeIgniter 4
+- HTML
+- CSS
+- JavaScript
+- Bootstrap 5.2.1
+- Some other JavaScript library
 
-Copy `env` to `.env` and tailor for your app, specifically the baseURL
-and any database settings.
+# Project Achievements
 
-## Important Change with index.php
+Here are some of the key achievements of the project:
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+- Completing the project on time even less than the estimated time of 2 weeks
+- Satisfied the client with the final results that exceed the client's expectations
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+# Project Challenges
 
-**Please** read the user guide for a better explanation of how CI4 works!
+Here are some of the challenges I faced while working on the project:
 
-## Repository Management
+- Converting a spreadsheet based data into web application and make it available online so public users can view it with good user experience
 
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
+# Why I'm Sharing These Projects
 
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
+I'm sharing these projects as part of my portfolio to showcase my skills and experience as a freelance developer. I hope that they demonstrate my ability to work with different clients and technologies and my commitment to delivering high-quality work.
 
-## Server Requirements
+# How to Use This Project
 
-PHP version 7.4 or higher is required, with the following extensions installed:
+This project is meant to showcase my skills and experience as a freelance developer. You are welcome to explore the project and use it as inspiration for your own work.
 
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+**However, please note that this project was done for a specific client and may not be suitable for your own needs. Please do not use any of the code or assets without permission.**
 
-Additionally, make sure that the following extensions are enabled in your PHP:
+## Installation Guide
 
-- json (enabled by default - don't turn it off)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php)
-- xml (enabled by default - don't turn it off)
-# edu-bmn
+1. [Download the latest release](https://github.com/vkr16/edu-bmn/releases)
+2. Extract the zip to your server or localhost directory
+3. Import `db-edu-bmn.sql` to your database server
+4. Configure these variable in .env file
+   - `app.baseURL = [YOUR BASE URL HERE | example: http://localhost/edu-bmn/]`
+   - `database.default.hostname = [YOUR DATABASE HOST | example: localhost]`
+   - `database.default.database = [YOUR DATABASE NAME | example: db-edu-bmn]`
+   - `database.default.username = [YOUR DATABASE USERNAME | example: root]`
+   - `database.default.password = [YOUR DATABASE PASSWORD | example: root]`
+5. Adjust the `HOST_URL` variable on `app/Config/Constants.php` line 106
+   - `define('HOST_URL', $HTTProtocol . $_SERVER['SERVER_NAME'] . ':8074/edu-bmn');`
+     - Change the `':8074/edu-bmn'` to your server port and path or delete it if not needed
+
+## Basic Usage Guide
+
+1. Run the application by accessing the base url
+2. Login with an account
+   - Pre-registered account :
+     - `Email = admin@akuonline.my.id`
+     - `Password = admin`
+3. To add or update any data use the `upload format.xlsx` as template and save as `.csv` to upload
+4. You can explore the rest of the features on this application by yourself
+
+# Contact Me
+
+If you have any questions about this project or would like to discuss a potential freelance opportunity, please feel free to contact me. My email address is fikri.droid16@gmail.com or visit my web page at [akuonline.my.id](https://akuonline.my.id).
+
+Thank you for taking the time to review my project portfolio!
+
+#

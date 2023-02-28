@@ -1,0 +1,43 @@
+ERROR - 2023-02-28 15:58:01 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'edubmnid_dbuser'@'localhost' (using password: YES) in D:\xampp74\htdocs\edu-bmn\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 D:\xampp74\htdocs\edu-bmn\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'edubmnid_dbuser', 'edubmnid_dbpass', 'edubmnid_master', 3306, '', 0)
+#1 D:\xampp74\htdocs\edu-bmn\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\xampp74\htdocs\edu-bmn\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\xampp74\htdocs\edu-bmn\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp74\htdocs\edu-bmn\vendor\codeigniter4\framework\system\Model.php(185): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp74\htdocs\edu-bmn\vendor\codeigniter4\framework\system\BaseModel.php(523): CodeIgniter\Model->doFind(false, NULL)
+#6 D:\xampp74\htdocs\edu-bmn\app\Controllers\Auth.php(51): CodeIgniter\BaseModel->find()
+#7 D:\xampp74\htdocs\edu-bmn\vendor\codeigniter4\framework\system\CodeIgniter.php(907): App\Controllers\Auth->authenticate()
+#8 D:\xampp74\htdocs\edu-bmn\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 D:\xampp74\htdocs\edu-bmn\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp74\htdocs\edu-bmn\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in D:\xampp74\htdocs\edu-bmn\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 D:\xampp74\htdocs\edu-bmn\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\xampp74\htdocs\edu-bmn\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\xampp74\htdocs\edu-bmn\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\xampp74\htdocs\edu-bmn\vendor\codeigniter4\framework\system\Model.php(185): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\xampp74\htdocs\edu-bmn\vendor\codeigniter4\framework\system\BaseModel.php(523): CodeIgniter\Model->doFind(false, NULL)
+#5 D:\xampp74\htdocs\edu-bmn\app\Controllers\Auth.php(51): CodeIgniter\BaseModel->find()
+#6 D:\xampp74\htdocs\edu-bmn\vendor\codeigniter4\framework\system\CodeIgniter.php(907): App\Controllers\Auth->authenticate()
+#7 D:\xampp74\htdocs\edu-bmn\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 D:\xampp74\htdocs\edu-bmn\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp74\htdocs\edu-bmn\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-02-28 15:58:01 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `email` = :email:
+AND `users`.`deleted_at` IS NULL', [...], false)
+ 3 SYSTEMPATH\Model.php(185): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(523): CodeIgniter\Model->doFind(false, null)
+ 5 APPPATH\Controllers\Auth.php(51): CodeIgniter\BaseModel->find()
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Auth->authenticate()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

@@ -24,7 +24,7 @@ class App extends BaseConfig
      *
      * @var string
      */
-    public $baseURL = 'http://localhost/data-bmn/';
+    public $baseURL = 'http://localhost:8074/edu-bmn/';
 
     /**
      * --------------------------------------------------------------------------

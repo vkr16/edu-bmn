@@ -39,6 +39,7 @@
                             <table id="tabel-pdm" class="table">
                                 <thead>
                                     <th style="white-space: nowrap;">No</th>
+                                    <th style="white-space: nowrap;" hidden>UID</th>
                                     <th style="white-space: nowrap;">Kode Barang</th>
                                     <th style="white-space: nowrap;">NUP</th>
                                     <th style="white-space: nowrap;">Nama/Jenis Barang</th>
@@ -59,6 +60,7 @@
                                     ?>
                                         <tr>
                                             <td><?= $key + 1; ?></td>
+                                            <td hidden><?= $pdm['uid']; ?></td>
                                             <td><?= $pdm['kode_barang']; ?></td>
                                             <td><?= $pdm['nup']; ?></td>
                                             <td><?= $pdm['nama_barang']; ?></td>
@@ -342,6 +344,13 @@
                 echo "Notiflix.Notify.failure('Terjadi kesalahan, Email gagal di perbarui!')";
             } elseif ($_COOKIE['updateemail'] == 'conflict') {
                 echo "Notiflix.Notify.warning('Email sudah terdaftar pada akun pengguna lain!')";
+            }
+        }
+        if (isset($_COOKIE['uploaddata'])) {
+            if ($_COOKIE['uploaddata'] == 'success') {
+                echo "Notiflix.Notify.success('Data berhasil di upload')";
+            } elseif ($_COOKIE['uploaddata'] == 'unsupported') {
+                echo "Notiflix.Notify.failure('Jenis file tidak didukung')";
             }
         }
         ?>

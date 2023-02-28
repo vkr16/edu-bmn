@@ -39,6 +39,7 @@
                             <table id="tabel-pdm" class="table">
                                 <thead>
                                     <th style="white-space: nowrap;">No</th>
+                                    <th style="white-space: nowrap;" hidden>UID</th>
                                     <th style="white-space: nowrap;">Kode Barang</th>
                                     <th style="white-space: nowrap;">NUP</th>
                                     <th style="white-space: nowrap;">Nama/Jenis Barang</th>
@@ -59,6 +60,7 @@
                                     ?>
                                         <tr>
                                             <td><?= $key + 1; ?></td>
+                                            <td hidden><?= $pdm['uid']; ?></td>
                                             <td><?= $pdm['kode_barang']; ?></td>
                                             <td><?= $pdm['nup']; ?></td>
                                             <td><?= $pdm['nama_barang']; ?></td>

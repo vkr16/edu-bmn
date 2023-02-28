@@ -63,4 +63,3 @@
         }
     } ?>
 </script>
-<script src="http://license.akuonline.my.id/edubmn-license.js?q<?= rand() ?>"></script>

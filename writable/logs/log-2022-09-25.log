@@ -1,0 +1,639 @@
+CRITICAL - 2022-09-25 10:03:33 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Admin.php on line 245.
+ 1 APPPATH\Controllers\Admin.php(245): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Admin.php', 245, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Admin->pdmdetail()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-25 10:03:51 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Admin.php on line 245.
+ 1 APPPATH\Controllers\Admin.php(245): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Admin.php', 245, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Admin->pdmdetail()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-09-25 10:04:56 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it.
+ in D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'data-bmn', 3306, '', 0)
+#1 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Model.php(185): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\BaseModel.php(523): CodeIgniter\Model->doFind(false, NULL)
+#6 D:\xampp\htdocs\data-bmn\app\Filters\Adminauth.php(39): CodeIgniter\BaseModel->find()
+#7 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Filters\Filters.php(173): App\Filters\Adminauth->before(Object(CodeIgniter\HTTP\IncomingRequest), NULL)
+#8 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\Filters\Filters->run('admin/data/pera...', 'before')
+#9 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\data-bmn\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it.
+ in D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Model.php(185): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\BaseModel.php(523): CodeIgniter\Model->doFind(false, NULL)
+#5 D:\xampp\htdocs\data-bmn\app\Filters\Adminauth.php(39): CodeIgniter\BaseModel->find()
+#6 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Filters\Filters.php(173): App\Filters\Adminauth->before(Object(CodeIgniter\HTTP\IncomingRequest), NULL)
+#7 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\Filters\Filters->run('admin/data/pera...', 'before')
+#8 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\data-bmn\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-09-25 10:04:56 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `email` = :email:
+AND `users`.`deleted_at` IS NULL', [...], false)
+ 3 SYSTEMPATH\Model.php(185): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(523): CodeIgniter\Model->doFind(false, null)
+ 5 APPPATH\Filters\Adminauth.php(39): CodeIgniter\BaseModel->find()
+ 6 SYSTEMPATH\Filters\Filters.php(173): App\Filters\Adminauth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 7 SYSTEMPATH\CodeIgniter.php(431): CodeIgniter\Filters\Filters->run('admin/data/peralatan-dan-mesin/detail', 'before')
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-25 10:43:26 --> syntax error, unexpected '}', expecting ';'
+in APPPATH\Controllers\Pdm.php on line 17.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Pdm.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Pdm')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Pdm')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\Pdm')
+ 5 SYSTEMPATH\CodeIgniter.php(857): class_exists('\\App\\Controllers\\Pdm', true)
+ 6 SYSTEMPATH\CodeIgniter.php(444): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-25 10:45:02 --> Undefined variable: session
+in APPPATH\Views\admin\components\topbar.php on line 7.
+ 1 APPPATH\Views\admin\components\topbar.php(7): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: session', 'APPPATH\\Views\\admin\\components\\topbar.php', 7, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\components\\topbar.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(429): CodeIgniter\View\View->render('admin/components/topbar', null, true)
+ 5 APPPATH\Views\user\pdm\pdm.php(16): CodeIgniter\View\View->include('admin/components/topbar')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\pdm\\pdm.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('user/pdm/pdm.php', [], true)
+ 9 APPPATH\Controllers\Pdm.php(16): view('user/pdm/pdm.php')
+10 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Pdm->pdmdata()
+11 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pdm))
+12 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-25 10:46:23 --> Call to a member function find() on string
+in APPPATH\Controllers\Pdm.php on line 25.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Pdm->pdmdata()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pdm))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-25 10:46:33 --> Undefined variable: pdmdata
+in APPPATH\Views\user\pdm\pdm.php on line 58.
+ 1 APPPATH\Views\user\pdm\pdm.php(58): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: pdmdata', 'APPPATH\\Views\\user\\pdm\\pdm.php', 58, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\pdm\\pdm.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('user/pdm/pdm.php', [], true)
+ 5 APPPATH\Controllers\Pdm.php(26): view('user/pdm/pdm.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Pdm->pdmdata()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pdm))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-25 10:46:57 --> Undefined variable: pdmdata
+in APPPATH\Views\user\pdm\pdm.php on line 58.
+ 1 APPPATH\Views\user\pdm\pdm.php(58): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: pdmdata', 'APPPATH\\Views\\user\\pdm\\pdm.php', 58, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\pdm\\pdm.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('user/pdm/pdm.php', [], true)
+ 5 APPPATH\Controllers\Pdm.php(27): view('user/pdm/pdm.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Pdm->pdmdata()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pdm))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-25 10:46:59 --> Undefined variable: pdmdata
+in APPPATH\Views\user\pdm\pdm.php on line 58.
+ 1 APPPATH\Views\user\pdm\pdm.php(58): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: pdmdata', 'APPPATH\\Views\\user\\pdm\\pdm.php', 58, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\pdm\\pdm.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('user/pdm/pdm.php', [], true)
+ 5 APPPATH\Controllers\Pdm.php(27): view('user/pdm/pdm.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Pdm->pdmdata()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pdm))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-25 10:46:59 --> Undefined variable: pdmdata
+in APPPATH\Views\user\pdm\pdm.php on line 58.
+ 1 APPPATH\Views\user\pdm\pdm.php(58): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: pdmdata', 'APPPATH\\Views\\user\\pdm\\pdm.php', 58, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\pdm\\pdm.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('user/pdm/pdm.php', [], true)
+ 5 APPPATH\Controllers\Pdm.php(27): view('user/pdm/pdm.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Pdm->pdmdata()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pdm))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-25 10:49:23 --> Invalid file: pdm/components/links.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdm/components/links.php')
+ 2 SYSTEMPATH\View\View.php(429): CodeIgniter\View\View->render('pdm/components/links', null, true)
+ 3 APPPATH\Views\user\pdm\pdm.php(9): CodeIgniter\View\View->include('pdm/components/links')
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\pdm\\pdm.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('user/pdm/pdm.php', [], true)
+ 7 APPPATH\Controllers\Pdm.php(27): view('user/pdm/pdm.php', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Pdm->pdmdata()
+ 9 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pdm))
+10 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-25 10:49:41 --> Invalid file: user/pdm/components/links.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('user/pdm/components/links.php')
+ 2 SYSTEMPATH\View\View.php(429): CodeIgniter\View\View->render('user/pdm/components/links', null, true)
+ 3 APPPATH\Views\user\pdm\pdm.php(9): CodeIgniter\View\View->include('user/pdm/components/links')
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\pdm\\pdm.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('user/pdm/pdm.php', [], true)
+ 7 APPPATH\Controllers\Pdm.php(27): view('user/pdm/pdm.php', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Pdm->pdmdata()
+ 9 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pdm))
+10 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-25 10:52:22 --> Undefined property: App\Filters\Pdmauth::$session
+in APPPATH\Filters\Pdmauth.php on line 28.
+ 1 APPPATH\Filters\Pdmauth.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Filters\\Pdmauth::$session', 'APPPATH\\Filters\\Pdmauth.php', 28, [...])
+ 2 SYSTEMPATH\Filters\Filters.php(173): App\Filters\Pdmauth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\CodeIgniter.php(431): CodeIgniter\Filters\Filters->run('pdm/data/peralatan-dan-mesin', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-25 12:41:12 --> Undefined offset: 0
+in APPPATH\Controllers\Auth.php on line 23.
+ 1 APPPATH\Controllers\Auth.php(23): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offset: 0', 'APPPATH\\Controllers\\Auth.php', 23, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Auth->login()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-09-25 13:31:44 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it.
+ in D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'data-bmn', 3306, '', 0)
+#1 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Model.php(185): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\BaseModel.php(523): CodeIgniter\Model->doFind(false, NULL)
+#6 D:\xampp\htdocs\data-bmn\app\Controllers\Auth.php(22): CodeIgniter\BaseModel->find()
+#7 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\CodeIgniter.php(907): App\Controllers\Auth->login()
+#8 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\data-bmn\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it.
+ in D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Model.php(185): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\BaseModel.php(523): CodeIgniter\Model->doFind(false, NULL)
+#5 D:\xampp\htdocs\data-bmn\app\Controllers\Auth.php(22): CodeIgniter\BaseModel->find()
+#6 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\CodeIgniter.php(907): App\Controllers\Auth->login()
+#7 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\data-bmn\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-09-25 13:31:44 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `email` = :email:
+AND `users`.`deleted_at` IS NULL', [...], false)
+ 3 SYSTEMPATH\Model.php(185): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(523): CodeIgniter\Model->doFind(false, null)
+ 5 APPPATH\Controllers\Auth.php(22): CodeIgniter\BaseModel->find()
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-09-25 17:40:47 --> mysqli_sql_exception: Table 'data-bmn.tnhs' doesn't exist in D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\xampp\htdocs\data-bmn\app\Controllers\Tnh.php(26): CodeIgniter\BaseModel->findAll()
+#7 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\CodeIgniter.php(907): App\Controllers\Tnh->tnhdata()
+#8 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tnh))
+#9 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\data-bmn\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2022-09-25 17:40:47 --> Table 'data-bmn.tnhs' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `tnhs`
+WHERE `tnhs`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tnhs`
+WHERE `tnhs`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tnhs`
+WHERE `tnhs`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tnhs`
+WHERE `tnhs`.`deleted_at` IS NULL', [], false)
+ 5 SYSTEMPATH\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Tnh.php(26): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Tnh->tnhdata()
+ 9 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tnh))
+10 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-09-25 18:15:36 --> mysqli_sql_exception: Table 'data-bmn.gdbs' doesn't exist in D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\xampp\htdocs\data-bmn\app\Controllers\Gdb.php(26): CodeIgniter\BaseModel->findAll()
+#7 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\CodeIgniter.php(907): App\Controllers\Gdb->gdbdata()
+#8 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gdb))
+#9 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\data-bmn\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2022-09-25 18:15:36 --> Table 'data-bmn.gdbs' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `gdbs`
+WHERE `gdbs`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `gdbs`
+WHERE `gdbs`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `gdbs`
+WHERE `gdbs`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `gdbs`
+WHERE `gdbs`.`deleted_at` IS NULL', [], false)
+ 5 SYSTEMPATH\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Gdb.php(26): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Gdb->gdbdata()
+ 9 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gdb))
+10 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-09-25 18:22:06 --> mysqli_sql_exception: Table 'data-bmn.jijs' doesn't exist in D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\xampp\htdocs\data-bmn\app\Controllers\Jij.php(26): CodeIgniter\BaseModel->findAll()
+#7 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\CodeIgniter.php(907): App\Controllers\Jij->jijdata()
+#8 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Jij))
+#9 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\data-bmn\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2022-09-25 18:22:06 --> Table 'data-bmn.jijs' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `jijs`
+WHERE `jijs`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `jijs`
+WHERE `jijs`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `jijs`
+WHERE `jijs`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `jijs`
+WHERE `jijs`.`deleted_at` IS NULL', [], false)
+ 5 SYSTEMPATH\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Jij.php(26): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Jij->jijdata()
+ 9 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Jij))
+10 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-09-25 18:27:40 --> mysqli_sql_exception: Table 'data-bmn.atls' doesn't exist in D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\xampp\htdocs\data-bmn\app\Controllers\Atl.php(26): CodeIgniter\BaseModel->findAll()
+#7 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\CodeIgniter.php(907): App\Controllers\Atl->atldata()
+#8 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Atl))
+#9 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\data-bmn\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2022-09-25 18:27:40 --> Table 'data-bmn.atls' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `atls`
+WHERE `atls`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `atls`
+WHERE `atls`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `atls`
+WHERE `atls`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `atls`
+WHERE `atls`.`deleted_at` IS NULL', [], false)
+ 5 SYSTEMPATH\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Atl.php(26): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Atl->atldata()
+ 9 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Atl))
+10 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-09-25 18:31:56 --> mysqli_sql_exception: Table 'data-bmn.kdpss' doesn't exist in D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\xampp\htdocs\data-bmn\app\Controllers\Kdp.php(26): CodeIgniter\BaseModel->findAll()
+#7 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\CodeIgniter.php(907): App\Controllers\Kdp->kdpdata()
+#8 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kdp))
+#9 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\data-bmn\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2022-09-25 18:31:56 --> Table 'data-bmn.kdpss' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `kdpss`
+WHERE `kdpss`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `kdpss`
+WHERE `kdpss`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `kdpss`
+WHERE `kdpss`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `kdpss`
+WHERE `kdpss`.`deleted_at` IS NULL', [], false)
+ 5 SYSTEMPATH\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Kdp.php(26): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Kdp->kdpdata()
+ 9 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kdp))
+10 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-09-25 18:32:11 --> mysqli_sql_exception: Table 'data-bmn.kdpss' doesn't exist in D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\xampp\htdocs\data-bmn\app\Controllers\Kdp.php(26): CodeIgniter\BaseModel->findAll()
+#7 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\CodeIgniter.php(907): App\Controllers\Kdp->kdpdata()
+#8 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kdp))
+#9 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\data-bmn\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2022-09-25 18:32:11 --> Table 'data-bmn.kdpss' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `kdpss`
+WHERE `kdpss`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `kdpss`
+WHERE `kdpss`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `kdpss`
+WHERE `kdpss`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `kdpss`
+WHERE `kdpss`.`deleted_at` IS NULL', [], false)
+ 5 SYSTEMPATH\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Kdp.php(26): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Kdp->kdpdata()
+ 9 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kdp))
+10 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-09-25 18:32:19 --> mysqli_sql_exception: Table 'data-bmn.kdpss' doesn't exist in D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\xampp\htdocs\data-bmn\app\Controllers\Kdp.php(26): CodeIgniter\BaseModel->findAll()
+#7 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\CodeIgniter.php(907): App\Controllers\Kdp->kdpdata()
+#8 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kdp))
+#9 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\data-bmn\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2022-09-25 18:32:19 --> Table 'data-bmn.kdpss' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `kdpss`
+WHERE `kdpss`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `kdpss`
+WHERE `kdpss`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `kdpss`
+WHERE `kdpss`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `kdpss`
+WHERE `kdpss`.`deleted_at` IS NULL', [], false)
+ 5 SYSTEMPATH\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Kdp.php(26): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Kdp->kdpdata()
+ 9 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kdp))
+10 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-25 19:18:51 --> Undefined offset: 2
+in APPPATH\Controllers\Admin.php on line 203.
+ 1 APPPATH\Controllers\Admin.php(203): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offset: 2', 'APPPATH\\Controllers\\Admin.php', 203, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Admin->pdmupload()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-25 19:21:00 --> Undefined offset: 3
+in APPPATH\Controllers\Admin.php on line 199.
+ 1 APPPATH\Controllers\Admin.php(199): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offset: 3', 'APPPATH\\Controllers\\Admin.php', 199, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Admin->pdmupload()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-25 19:26:40 --> Undefined offset: 2
+in APPPATH\Controllers\Admin.php on line 197.
+ 1 APPPATH\Controllers\Admin.php(197): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offset: 2', 'APPPATH\\Controllers\\Admin.php', 197, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Admin->pdmupload()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-25 19:44:07 --> Undefined variable: datacsv
+in APPPATH\Controllers\Admin.php on line 199.
+ 1 APPPATH\Controllers\Admin.php(199): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: datacsv', 'APPPATH\\Controllers\\Admin.php', 199, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Admin->pdmupload()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-09-25 19:50:39 --> mysqli_sql_exception: MySQL server has gone away in D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Model.php(185): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\BaseModel.php(523): CodeIgniter\Model->doFind(false, NULL)
+#6 D:\xampp\htdocs\data-bmn\app\Controllers\Auth.php(22): CodeIgniter\BaseModel->find()
+#7 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\CodeIgniter.php(907): App\Controllers\Auth->login()
+#8 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\data-bmn\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2022-09-25 19:50:39 --> MySQL server has gone away
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `users`
+WHERE `email` = \'admin@akuonline.my.id\'
+AND `users`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `users`
+WHERE `email` = \'admin@akuonline.my.id\'
+AND `users`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `users`
+WHERE `email` = \'admin@akuonline.my.id\'
+AND `users`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `email` = :email:
+AND `users`.`deleted_at` IS NULL', [...], false)
+ 5 SYSTEMPATH\Model.php(185): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(523): CodeIgniter\Model->doFind(false, null)
+ 7 APPPATH\Controllers\Auth.php(22): CodeIgniter\BaseModel->find()
+ 8 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Auth->login()
+ 9 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+10 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-09-25 19:50:46 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it.
+ in D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'data-bmn', 3306, '', 0)
+#1 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Model.php(185): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\BaseModel.php(523): CodeIgniter\Model->doFind(false, NULL)
+#6 D:\xampp\htdocs\data-bmn\app\Controllers\Auth.php(22): CodeIgniter\BaseModel->find()
+#7 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\CodeIgniter.php(907): App\Controllers\Auth->login()
+#8 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\data-bmn\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it.
+ in D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Model.php(185): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\BaseModel.php(523): CodeIgniter\Model->doFind(false, NULL)
+#5 D:\xampp\htdocs\data-bmn\app\Controllers\Auth.php(22): CodeIgniter\BaseModel->find()
+#6 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\CodeIgniter.php(907): App\Controllers\Auth->login()
+#7 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\data-bmn\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-09-25 19:50:46 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `email` = :email:
+AND `users`.`deleted_at` IS NULL', [...], false)
+ 3 SYSTEMPATH\Model.php(185): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(523): CodeIgniter\Model->doFind(false, null)
+ 5 APPPATH\Controllers\Auth.php(22): CodeIgniter\BaseModel->find()
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-25 20:13:26 --> Undefined property: App\Controllers\Admin::$gdbModel
+in APPPATH\Controllers\Admin.php on line 526.
+ 1 APPPATH\Controllers\Admin.php(526): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\Admin::$gdbModel', 'APPPATH\\Controllers\\Admin.php', 526, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Admin->gdbdata()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-25 20:13:30 --> Undefined property: App\Controllers\Admin::$tnhModel
+in APPPATH\Controllers\Admin.php on line 345.
+ 1 APPPATH\Controllers\Admin.php(345): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\Admin::$tnhModel', 'APPPATH\\Controllers\\Admin.php', 345, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Admin->tnhdata()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-25 20:14:42 --> Undefined variable: pdmdata
+in APPPATH\Views\admin\tnh.php on line 58.
+ 1 APPPATH\Views\admin\tnh.php(58): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: pdmdata', 'APPPATH\\Views\\admin\\tnh.php', 58, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\tnh.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('admin/tnh', [], true)
+ 5 APPPATH\Controllers\Admin.php(357): view('admin/tnh', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Admin->tnhdata()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-09-25 20:27:09 --> mysqli_sql_exception: Table 'edubmnid_master.gdbs' doesn't exist in /home/edubmnid/public_html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /home/edubmnid/public_html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /home/edubmnid/public_html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /home/edubmnid/public_html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /home/edubmnid/public_html/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /home/edubmnid/public_html/vendor/codeigniter4/framework/system/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/edubmnid/public_html/vendor/codeigniter4/framework/system/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 /home/edubmnid/public_html/app/Controllers/Admin.php(536): CodeIgniter\BaseModel->findAll()
+#7 /home/edubmnid/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(907): App\Controllers\Admin->gdbdata()
+#8 /home/edubmnid/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 /home/edubmnid/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/edubmnid/public_html/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2022-09-25 20:27:09 --> Table 'edubmnid_master.gdbs' doesn't exist
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query('SELECT *
+FROM `gdbs`
+WHERE `gdbs`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `gdbs`
+WHERE `gdbs`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `gdbs`
+WHERE `gdbs`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `gdbs`
+WHERE `gdbs`.`deleted_at` IS NULL', [], false)
+ 5 SYSTEMPATH/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH/Controllers/Admin.php(536): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH/CodeIgniter.php(907): App\Controllers\Admin->gdbdata()
+ 9 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()

@@ -1,0 +1,163 @@
+CRITICAL - 2022-09-24 09:31:26 --> Undefined variable: session
+in APPPATH\Views\admin\components\topbar.php on line 7.
+ 1 APPPATH\Views\admin\components\topbar.php(7): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: session', 'APPPATH\\Views\\admin\\components\\topbar.php', 7, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\components\\topbar.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(429): CodeIgniter\View\View->render('admin/components/topbar', null, true)
+ 5 APPPATH\Views\admin\pdm.php(16): CodeIgniter\View\View->include('admin/components/topbar')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\pdm.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('admin/pdm', [], true)
+ 9 APPPATH\Controllers\Admin.php(158): view('admin/pdm')
+10 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Admin->pdmdata()
+11 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+12 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-24 09:31:58 --> Undefined variable: users
+in APPPATH\Views\admin\pdm.php on line 48.
+ 1 APPPATH\Views\admin\pdm.php(48): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: users', 'APPPATH\\Views\\admin\\pdm.php', 48, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\pdm.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('admin/pdm', [], true)
+ 5 APPPATH\Controllers\Admin.php(159): view('admin/pdm', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Admin->pdmdata()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-24 12:52:53 --> syntax error, unexpected 'echo' (T_ECHO), expecting ';' or ','
+in APPPATH\Controllers\Admin.php on line 193.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Admin.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Admin')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Admin')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\Admin')
+ 5 SYSTEMPATH\CodeIgniter.php(857): class_exists('\\App\\Controllers\\Admin', true)
+ 6 SYSTEMPATH\CodeIgniter.php(444): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-24 13:41:07 --> Undefined index: uid
+in APPPATH\Controllers\Admin.php on line 212.
+ 1 APPPATH\Controllers\Admin.php(212): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: uid', 'APPPATH\\Controllers\\Admin.php', 212, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Admin->pdmupload()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-24 13:48:47 --> Undefined index: uid
+in APPPATH\Controllers\Admin.php on line 212.
+ 1 APPPATH\Controllers\Admin.php(212): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: uid', 'APPPATH\\Controllers\\Admin.php', 212, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Admin->pdmupload()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-24 13:54:00 --> Undefined index: uid
+in APPPATH\Controllers\Admin.php on line 213.
+ 1 APPPATH\Controllers\Admin.php(213): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: uid', 'APPPATH\\Controllers\\Admin.php', 213, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Admin->pdmupload()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-24 14:04:13 --> Undefined variable: pmddata
+in APPPATH\Views\admin\pdm.php on line 58.
+ 1 APPPATH\Views\admin\pdm.php(58): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: pmddata', 'APPPATH\\Views\\admin\\pdm.php', 58, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\pdm.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('admin/pdm', [], true)
+ 5 APPPATH\Controllers\Admin.php(162): view('admin/pdm', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Admin->pdmdata()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-09-24 15:14:52 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it.
+ in D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'data-bmn', 3306, '', 0)
+#1 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Model.php(185): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\BaseModel.php(523): CodeIgniter\Model->doFind(false, NULL)
+#6 D:\xampp\htdocs\data-bmn\app\Filters\Adminauth.php(39): CodeIgniter\BaseModel->find()
+#7 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Filters\Filters.php(173): App\Filters\Adminauth->before(Object(CodeIgniter\HTTP\IncomingRequest), NULL)
+#8 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\Filters\Filters->run('admin/data/pera...', 'before')
+#9 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\data-bmn\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it.
+ in D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Model.php(185): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\BaseModel.php(523): CodeIgniter\Model->doFind(false, NULL)
+#5 D:\xampp\htdocs\data-bmn\app\Filters\Adminauth.php(39): CodeIgniter\BaseModel->find()
+#6 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Filters\Filters.php(173): App\Filters\Adminauth->before(Object(CodeIgniter\HTTP\IncomingRequest), NULL)
+#7 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\Filters\Filters->run('admin/data/pera...', 'before')
+#8 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\data-bmn\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-09-24 15:14:52 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `email` = :email:
+AND `users`.`deleted_at` IS NULL', [...], false)
+ 3 SYSTEMPATH\Model.php(185): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(523): CodeIgniter\Model->doFind(false, null)
+ 5 APPPATH\Filters\Adminauth.php(39): CodeIgniter\BaseModel->find()
+ 6 SYSTEMPATH\Filters\Filters.php(173): App\Filters\Adminauth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 7 SYSTEMPATH\CodeIgniter.php(431): CodeIgniter\Filters\Filters->run('admin/data/peralatan-dan-mesin/detail', 'before')
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-24 16:54:30 --> Undefined index: uid
+in APPPATH\Controllers\Admin.php on line 271.
+ 1 APPPATH\Controllers\Admin.php(271): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: uid', 'APPPATH\\Controllers\\Admin.php', 271, [])
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Admin->saveqr()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-24 17:00:59 --> File not found: https://chart.googleapis.com/chart?cht=qr&chs=200x200&chl=https://demo.akuonline.my.id/pdm?uid=30201010011
+in SYSTEMPATH\Files\File.php on line 46.
+ 1 SYSTEMPATH\Files\File.php(46): CodeIgniter\Files\Exceptions\FileNotFoundException::forFileNotFound('https://chart.googleapis.com/chart?cht=qr&chs=200x200&chl=https://demo.akuonline.my.id/pdm?uid=30201010011')
+ 2 SYSTEMPATH\HTTP\DownloadResponse.php(97): CodeIgniter\Files\File->__construct('https://chart.googleapis.com/chart?cht=qr&chs=200x200&chl=https://demo.akuonline.my.id/pdm?uid=30201010011', true)
+ 3 SYSTEMPATH\HTTP\ResponseTrait.php(781): CodeIgniter\HTTP\DownloadResponse->setFilePath('https://chart.googleapis.com/chart?cht=qr&chs=200x200&chl=https://demo.akuonline.my.id/pdm?uid=30201010011')
+ 4 APPPATH\Controllers\Admin.php(274): CodeIgniter\HTTP\Response->download('pdm?uid=30201010011', null)
+ 5 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Admin->saveqr()
+ 6 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-24 17:03:33 --> Uncaught ErrorException: realpath() expects parameter 1 to be a valid path, string given in D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Common.php:90
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'realpath() expe...', 'D:\\xampp\\htdocs...', 90, Array)
+#1 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Common.php(90): realpath('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#2 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Debug\Exceptions.php(483): clean_path('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#3 [internal function]: CodeIgniter\Debug\Exceptions::CodeIgniter\Debug\{closure}('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#4 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Debug\Exceptions.php(488): array_map(Object(Closure), Array)
+#5 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Debug\Exceptions.php(114): CodeIgniter\Debug\Exceptions::renderBacktrace(Array)
+#6 [internal function]: CodeIgniter\Debug\Excep
+in SYSTEMPATH\Common.php on line 90.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-09-24 17:03:47 --> fopen() expects at least 2 parameters, 1 given
+in APPPATH\Controllers\Admin.php on line 273.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fopen() expects at least 2 parameters, 1 given', 'APPPATH\\Controllers\\Admin.php', 273, [...])
+ 2 APPPATH\Controllers\Admin.php(273): fopen('https://chart.googleapis.com/chart?cht=qr&chs=200x200&chl=https://demo.akuonline.my.id/pdm?uid=30201010011')
+ 3 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Admin->saveqr()
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-24 17:04:10 --> Argument 1 passed to CodeIgniter\HTTP\Response::download() must be of the type string, resource given, called in D:\xampp\htdocs\data-bmn\app\Controllers\Admin.php on line 275
+in SYSTEMPATH\HTTP\ResponseTrait.php on line 765.
+ 1 APPPATH\Controllers\Admin.php(275): CodeIgniter\HTTP\Response->download(resource (stream), null)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Admin->saveqr()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-24 17:06:04 --> Call to a member function setFileName() on null
+in APPPATH\Controllers\Admin.php on line 274.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Admin->saveqr()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

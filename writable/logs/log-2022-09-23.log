@@ -1,0 +1,112 @@
+CRITICAL - 2022-09-23 01:05:26 --> Undefined property: App\Controllers\Admin::$session
+in APPPATH\Controllers\Admin.php on line 22.
+ 1 APPPATH\Controllers\Admin.php(22): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\Admin::$session', 'APPPATH\\Controllers\\Admin.php', 22, [])
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Admin->usermanagement()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-23 01:59:44 --> syntax error, unexpected '}'
+in APPPATH\Controllers\Admin.php on line 38.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Admin.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Admin')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Admin')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\Admin')
+ 5 SYSTEMPATH\CodeIgniter.php(857): class_exists('\\App\\Controllers\\Admin', true)
+ 6 SYSTEMPATH\CodeIgniter.php(444): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-23 02:05:05 --> Allowed fields must be specified for model: App\Models\UserModel
+in SYSTEMPATH\BaseModel.php on line 1139.
+ 1 SYSTEMPATH\BaseModel.php(1139): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\UserModel')
+ 2 SYSTEMPATH\BaseModel.php(713): CodeIgniter\BaseModel->doProtectFields([...])
+ 3 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 4 APPPATH\Controllers\Admin.php(46): CodeIgniter\Model->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Admin->adduser()
+ 6 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-23 14:34:20 --> syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting '-' or identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING)
+in APPPATH\Controllers\Admin.php on line 25.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Admin.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Admin')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Admin')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\Admin')
+ 5 SYSTEMPATH\CodeIgniter.php(857): class_exists('\\App\\Controllers\\Admin', true)
+ 6 SYSTEMPATH\CodeIgniter.php(444): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-23 14:34:45 --> Object of class CodeIgniter\Session\Session could not be converted to string
+in APPPATH\Controllers\Admin.php on line 25.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Admin->usermanagement()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-23 14:35:01 --> Object of class CodeIgniter\Session\Session could not be converted to string
+in APPPATH\Controllers\Admin.php on line 25.
+ 1 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Admin->usermanagement()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-23 14:36:17 --> syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting '-' or identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING)
+in APPPATH\Controllers\Admin.php on line 25.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Admin.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Admin')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Admin')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\Admin')
+ 5 SYSTEMPATH\CodeIgniter.php(857): class_exists('\\App\\Controllers\\Admin', true)
+ 6 SYSTEMPATH\CodeIgniter.php(444): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-23 16:18:07 --> Undefined offset: 0
+in APPPATH\Controllers\Admin.php on line 68.
+ 1 APPPATH\Controllers\Admin.php(68): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offset: 0', 'APPPATH\\Controllers\\Admin.php', 68, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Admin->edituser()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-09-23 16:27:14 --> mysqli_sql_exception: Unknown column 'fu@akuonline.my.idS' in 'where clause' in D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\xampp\htdocs\data-bmn\app\Controllers\Admin.php(68): CodeIgniter\BaseModel->findAll()
+#7 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\CodeIgniter.php(907): App\Controllers\Admin->edituser()
+#8 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 D:\xampp\htdocs\data-bmn\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\data-bmn\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2022-09-23 16:27:14 --> Unknown column 'fu@akuonline.my.idS' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `users`
+WHERE `email` = `fu@akuonline`.`my`.`idS` AND `id` != 16 AND `deleted_at` = NULL
+AND `users`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `users`
+WHERE `email` = `fu@akuonline`.`my`.`idS` AND `id` != 16 AND `deleted_at` = NULL
+AND `users`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `users`
+WHERE `email` = `fu@akuonline`.`my`.`idS` AND `id` != 16 AND `deleted_at` = NULL
+AND `users`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `email` = `fu@akuonline`.`my`.`idS` AND `id` != 16 AND `deleted_at` = NULL
+AND `users`.`deleted_at` IS NULL', [], false)
+ 5 SYSTEMPATH\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Admin.php(68): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Admin->edituser()
+ 9 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-23 19:31:39 --> Undefined offset: 0
+in APPPATH\Controllers\Admin.php on line 138.
+ 1 APPPATH\Controllers\Admin.php(138): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offset: 0', 'APPPATH\\Controllers\\Admin.php', 138, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Admin->updateemail()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
